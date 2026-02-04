@@ -227,6 +227,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // Clear old cards
         document.querySelectorAll('.course-card').forEach(c => c.remove());
 
+        // Group all course slots by day and slot index
+        const slotMap = {}; // { 'Monday-0': [course event objects] }
+
         selectedCourses.forEach(course => {
             course.slots.forEach(slot => {
                 // Find matching standard slot index
@@ -238,7 +241,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (slotIndex === -1) return;
 
-                // Calculate Span (How many slots does this cover?)
+                // Calculate span
                 let spanCount = 1;
                 for (let i = slotIndex + 1; i < TIME_SLOTS.length; i++) {
                     if (TIME_SLOTS[i].isBreak) continue;
@@ -246,11 +249,41 @@ document.addEventListener('DOMContentLoaded', () => {
                     else break;
                 }
 
-                const cell = document.querySelector(`.grid-cell[data-day="${slot.day}"][data-slot-index="${slotIndex}"]`);
-                if (cell) {
-                    const card = createCard(course, slot, spanCount);
-                    cell.appendChild(card);
+                const key = `${slot.day}-${slotIndex}`;
+                if (!slotMap[key]) slotMap[key] = [];
+                slotMap[key].push({ course, slot, spanCount });
+            });
+        });
+
+        // Render each slot group
+        Object.keys(slotMap).forEach(key => {
+            const events = slotMap[key];
+            const [day, slotIndex] = key.split('-');
+            const cell = document.querySelector(`.grid-cell[data-day="${day}"][data-slot-index="${slotIndex}"]`);
+
+            if (!cell) return;
+
+            // Determine width for each card
+            const count = events.length;
+
+            events.forEach((evt, index) => {
+                const card = createCard(evt.course, evt.slot, evt.spanCount);
+
+                // Position calculation
+                if (count > 1) {
+                    // Multiple cards in same slot - divide width
+                    const widthPercent = 100 / count;
+                    const leftPercent = widthPercent * index;
+
+                    card.style.width = `calc(${widthPercent}% - 4px)`;
+                    card.style.left = `calc(${leftPercent}% + 2px)`;
+                } else {
+                    // Single card - full width
+                    card.style.width = 'calc(100% - 4px)';
+                    card.style.left = '2px';
                 }
+
+                cell.appendChild(card);
             });
         });
     }
