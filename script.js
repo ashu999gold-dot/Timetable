@@ -90,29 +90,59 @@ document.addEventListener('DOMContentLoaded', () => {
             captureArea.style.background = '#1e1e2e';
             captureArea.style.borderRadius = '20px';
 
-            html2canvas(captureArea, {
-                scale: 3, // Very high quality
-                backgroundColor: '#1e1e2e',
-                useCORS: true,
-                logging: false
-            }).then(canvas => {
-                const link = document.createElement('a');
-                link.download = `timetable-${new Date().getTime()}.png`;
-                link.href = canvas.toDataURL('image/png');
-                link.click();
-
-                // Reset
-                captureArea.style.padding = '';
-                captureArea.style.background = '';
-                captureArea.style.borderRadius = '';
-                downloadBtn.textContent = '📸 Save as Image';
-                downloadBtn.disabled = false;
-            }).catch(err => {
-                console.error('Export failed:', err);
-                alert('Export failed. Please try again.');
-                downloadBtn.textContent = '📸 Save as Image';
-                downloadBtn.disabled = false;
+            // CRITICAL: Expand all cards to show full venue text for image
+            const allCards = document.querySelectorAll('.course-card');
+            allCards.forEach(card => {
+                card.classList.add('export-mode');
+                // Hide expand buttons in export
+                const btn = card.querySelector('.expand-btn');
+                if (btn) btn.style.display = 'none';
             });
+
+            // Small delay to let DOM update
+            setTimeout(() => {
+                html2canvas(captureArea, {
+                    scale: 3, // Very high quality
+                    backgroundColor: '#1e1e2e',
+                    useCORS: true,
+                    logging: false
+                }).then(canvas => {
+                    const link = document.createElement('a');
+                    link.download = `timetable-${new Date().getTime()}.png`;
+                    link.href = canvas.toDataURL('image/png');
+                    link.click();
+
+                    // Reset styles
+                    captureArea.style.padding = '';
+                    captureArea.style.background = '';
+                    captureArea.style.borderRadius = '';
+
+                    // Remove export mode from all cards
+                    allCards.forEach(card => {
+                        card.classList.remove('export-mode');
+                        const btn = card.querySelector('.expand-btn');
+                        if (btn) btn.style.display = '';
+                    });
+
+                    downloadBtn.textContent = '📸 Save as Image';
+                    downloadBtn.disabled = false;
+                }).catch(err => {
+                    console.error('Export failed:', err);
+                    alert('Export failed. Please try again.');
+
+                    // Reset on error too
+                    captureArea.style.padding = '';
+                    captureArea.style.background = '';
+                    allCards.forEach(card => {
+                        card.classList.remove('export-mode');
+                        const btn = card.querySelector('.expand-btn');
+                        if (btn) btn.style.display = '';
+                    });
+
+                    downloadBtn.textContent = '📸 Save as Image';
+                    downloadBtn.disabled = false;
+                });
+            }, 100); // 100ms delay for DOM to settle
         });
     }
 
