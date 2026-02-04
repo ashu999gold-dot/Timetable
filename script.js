@@ -219,80 +219,119 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function renderTimetable() {
-        // Clear existing course cards only (not the grid structure)
+        // Clear existing course cards only
         document.querySelectorAll('.course-card').forEach(card => card.remove());
+
+        // Group cards by day and start time to find overlaps
+        const placementMap = {}; // { 'Monday': [ { startVal, endVal, course, slot, ... } ] }
+
+        DAYS.forEach(day => placementMap[day] = []);
 
         courses.forEach(course => {
             course.slots.forEach(slot => {
+                const day = slot.day;
+                if (!placementMap[day]) return;
+
                 const startHour = parseInt(slot.start.split(':')[0]);
                 const startMin = parseInt(slot.start.split(':')[1]);
                 const endHour = parseInt(slot.end.split(':')[0]);
                 const endMin = parseInt(slot.end.split(':')[1]);
 
-                // Calculate duration in minutes
                 const startTotal = startHour * 60 + startMin;
                 const endTotal = endHour * 60 + endMin;
                 const duration = endTotal - startTotal;
 
-                // Find content cell for start time
-                // Note: We only support hour-based grid for simplicity in MVP, 
-                // but we can position relatively within the cell.
+                placementMap[day].push({
+                    course,
+                    slot,
+                    startTotal,
+                    endTotal,
+                    duration,
+                    startHour
+                });
+            });
+        });
 
-                // Which grid cell does this start in?
-                // Grid structure: 
-                // Row 1: Headers
-                // Row 2 (START_HOUR): TimeLabel, Mon, Tue, Wed, Thu, Fri
-                // Row structure is linear in DOM, CSS Grid handles layout.
+        // Loop through each day and process overlaps
+        DAYS.forEach(day => {
+            const dayEvents = placementMap[day];
+            if (!dayEvents.length) return;
 
-                // We need to find the specific cell element in the DOM
-                const dayIndex = DAYS.indexOf(slot.day);
-                if (dayIndex === -1) return;
+            // Sort by start time
+            dayEvents.sort((a, b) => a.startTotal - b.startTotal);
 
-                // Find the cell corresponding to the start hour and day.
-                // Selector: .grid-cell[data-day="Monday"][data-hour="9"]
-                const cell = document.querySelector(`.grid-cell[data-day="${slot.day}"][data-hour="${startHour}"]`);
+            // Simple column packing algorithm
+            const columns = []; // Array of arrays of events
+
+            dayEvents.forEach(evt => {
+                let placed = false;
+                for (let i = 0; i < columns.length; i++) {
+                    const col = columns[i];
+                    const lastInCol = col[col.length - 1];
+                    // If this event starts after the last one in this column ends, place it here
+                    if (evt.startTotal >= lastInCol.endTotal) {
+                        col.push(evt);
+                        evt.colIndex = i;
+                        placed = true;
+                        break;
+                    }
+                }
+
+                if (!placed) {
+                    // Start a new column
+                    columns.push([evt]);
+                    evt.colIndex = columns.length - 1;
+                }
+            });
+
+            // Calculate width for each event
+            // Max columns needed at any point in time = width divisor
+            // A more robust way: for each event, max overlaps = N. Width = 100/N%. Left = colIndex * Width.
+            // Simplified: Just use total columns count for the day (might be too narrow if simple schedule)
+            // Better: Overlap group detection. But let's stick to total columns for now as it's cleaner than just naive overlap.
+
+            // Actually, let's just optimize: if I have 2 columns total, width is 50%.
+            // But if column 2 is empty at time X, column 1 should ideally take 100%. 
+            // The current simple packing approach creates "lanes". Lane 1, Lane 2.
+            // If Coll 2 is empty later, Lane 1 stays 50%. This is acceptable for clarity.
+
+            const totalLanes = columns.length;
+
+            dayEvents.forEach(evt => {
+                const cellSelector = `.grid-cell[data-day="${day}"][data-hour="${evt.startHour}"]`;
+                const cell = document.querySelector(cellSelector);
 
                 if (cell) {
                     const card = document.createElement('div');
                     card.className = 'course-card';
-                    card.style.backgroundColor = course.color;
+                    card.style.backgroundColor = evt.course.color;
+
+                    // CONTENT: simplified
+                    // Use acronym for long names if needed, but for now just name
+                    // Add Venue if available
+                    const venue = evt.slot.venue || 'TBA';
+
                     card.innerHTML = `
-                        <div class="course-name">${course.name}</div>
-                        <div class="course-info">${course.instructor}</div>
-                        <div class="course-info">${slot.start} - ${slot.end}</div>
+                        <div class="course-name" title="${evt.course.name}">${evt.course.name}</div>
+                        <div class="course-venue">${venue}</div>
                     `;
 
-                    // Positioning math
-                    // Cell height is approx 60px (min-height) or determined by --slot-height if fixed.
-                    // For now, let's assume standard height and use percentage top/height relative to the cell,
-                    // allowing overflow if it spans multiple cells.
-
-                    // Actually, simpler approach for MVP:
-                    // Place it in the start cell, set height proportional to duration (1 hour = 100% of cell height?)
-                    // If grid rows are fixed height, 60min = 100%. 
-
-                    // Let's refine style.css to ensure cells have fixed height for accurate mapping?
-                    // Currently .grid-cell has min-height: 60px.
-
-                    // Let's force a height on grid cells in JS for calculation or rely on CSS variables.
-                    // For a robust implementation, we place the card "absolute" within the cell.
-                    // Top offset = (startMin / 60) * 100%
-                    // Height = (duration / 60) * 100% + (borders/gaps if spanning)
-
+                    // POSITIONING
+                    const startMin = evt.startTotal % 60;
                     card.style.top = `${(startMin / 60) * 100}%`;
 
-                    // Calculate height carefully. 
-                    // 1 hour cell = 100% height.
-                    // Gap is 8px.
-                    // If spans 2 hours, height = 200% + gap.
+                    // Height calculation: (duration / 60) * 100% + overlaps
+                    const hoursSpanned = evt.duration / 60;
+                    card.style.height = `calc(${hoursSpanned * 100}% + ${(Math.floor(hoursSpanned)) * 8}px)`;
 
-                    // Let's assume height percent = (duration/60) * 100 + (Math.floor(duration/60) * gap_percent_approx)
-                    // Better: `calc( ${duration/60 * 100}% + ${(duration/60 - 1) * 8}px )` roughly.
-
-                    const hoursSpanned = duration / 60;
-                    card.style.height = `calc(${hoursSpanned * 100}% + ${(Math.floor(hoursSpanned)) * 8}px)`; // Adding gap adjustment
-
-                    // Z-index handled by CSS hover
+                    // WIDTH & LEFT (Lane logic)
+                    if (totalLanes > 1) {
+                        card.style.width = `calc((100% - 4px) / ${totalLanes})`; // 4px buffer
+                        card.style.left = `calc(${(100 / totalLanes) * evt.colIndex}% + 2px)`;
+                    } else {
+                        card.style.width = 'calc(100% - 4px)';
+                        card.style.left = '2px';
+                    }
 
                     cell.appendChild(card);
                 }

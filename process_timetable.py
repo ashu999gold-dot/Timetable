@@ -76,41 +76,51 @@ def main():
             instructor = row.get('Name of the Instructors and Tutors', '')
             if pd.isna(instructor): instructor = "TBA"
             
-            # Extract slots
+            # Extract slots and venues
             slots = []
             
-            # Combine relevant columns text
-            slot_text = ""
+            # Helper to process column content
+            def process_column(col_text, slot_db):
+                found_slots = []
+                if pd.isna(col_text): return found_slots
+                col_text = str(col_text)
+                
+                # Extract venue: text within parentheses
+                # Regex heuristic: look for (...) blocks
+                venues = re.findall(r'\((.*?)\)', col_text)
+                venue_text = ", ".join(venues) if venues else "TBA"
+                
+                # Clean up venue text (remove newlines)
+                venue_text = venue_text.replace('\n', ' ').strip()
+                
+                # Find codes
+                tokens = re.split(r'[,\s\n\(\)]+', col_text)
+                for token in tokens:
+                    token = token.strip()
+                    if token in slot_db:
+                        s = slot_db[token].copy() # Copy to avoid mutating shared dict
+                        s['venue'] = venue_text
+                        found_slots.append(s)
+                return found_slots
+
             for col in ['Lecture', 'Tutorial', 'Lab']:
-                val = row.get(col)
-                if pd.notna(val):
-                    slot_text += str(val) + " "
+                slots.extend(process_column(row.get(col), slot_db))
             
-            # Find codes using regex (e.g., A1, B2, C1)
-            # Codes seem to be alphanumeric, usually 2 chars, uppercase letter + digit
-            # But strict regex might miss things. Let's look for tokens present in slot_db keys
+            # Deduplicate slots (same day/time might appear multiple times if formats are weird)
+            unique_slots = []
+            seen_keys = set()
+            for s in slots:
+                key = f"{s['day']}-{s['start']}"
+                if key not in seen_keys:
+                    unique_slots.append(s)
+                    seen_keys.add(key)
             
-            # Tokenize by comma, space, newlines
-            tokens = re.split(r'[,\s\n\(\)]+', slot_text)
-            
-            seen_slots = set()
-            
-            for token in tokens:
-                token = token.strip()
-                if token in slot_db:
-                    s = slot_db[token]
-                    # Create unique key to avoid duplicate slots for same course
-                    slot_key = f"{s['day']}-{s['start']}"
-                    if slot_key not in seen_slots:
-                        slots.append(s)
-                        seen_slots.add(slot_key)
-            
-            if len(slots) > 0:
+            if len(unique_slots) > 0:
                 all_courses.append({
                     'code': str(c_num).strip(),
                     'name': str(c_name).strip(),
-                    'instructor': str(instructor).strip(),
-                    'slots': slots
+                    'instructor': str(instructor).strip(), # Kept in data but won't show in card
+                    'slots': unique_slots
                 })
 
         print(f"Extracted {len(all_courses)} courses.")

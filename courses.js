@@ -7,12 +7,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "Central Arcade,Jagdish Patel Learning Theatre"
       },
       {
         "day": "Friday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "Central Arcade,Jagdish Patel Learning Theatre"
       }
     ]
   },
@@ -24,17 +26,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "Jasubhai Auditorium"
       },
       {
         "day": "Friday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "Jasubhai Auditorium"
       },
       {
         "day": "Wednesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/101,7/210,7/103,7/104,7/105,7/201,7/204"
       }
     ]
   },
@@ -46,17 +51,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "Jagdish Patel Learning Theatre"
       },
       {
         "day": "Friday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "Jagdish Patel Learning Theatre"
       },
       {
         "day": "Wednesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/205,7/206,7/207"
       }
     ]
   },
@@ -68,12 +76,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "Jasubhai Auditorium"
       },
       {
         "day": "Tuesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "10/104,10/105,10/203,10/204"
       }
     ]
   },
@@ -85,12 +95,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Thursday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "Jasubhai Auditorium"
       },
       {
         "day": "Tuesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "10/104,10/105"
       }
     ]
   },
@@ -102,22 +114,26 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "Jasubhai Auditorium"
       },
       {
         "day": "Monday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "Jasubhai Auditorium"
       },
       {
         "day": "Tuesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "10/103,10/104,Harsha Patel Learning Theatre"
       },
       {
         "day": "Tuesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "10/103,10/104,Harsha Patel Learning Theatre"
       }
     ]
   },
@@ -129,12 +145,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "Jayshree S Sheth Learning Theatre"
       },
       {
         "day": "Wednesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "Jayshree S Sheth Learning Theatre"
       }
     ]
   },
@@ -146,12 +164,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "Jasubhai Auditorium"
       },
       {
         "day": "Thursday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "10/104,Jasubhai Auditorium"
       }
     ]
   },
@@ -163,12 +183,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "11/102"
       },
       {
         "day": "Thursday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "10/104,10/105"
       }
     ]
   },
@@ -180,42 +202,50 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "Jasubhai Auditorium"
       },
       {
         "day": "Friday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "Jasubhai Auditorium"
       },
       {
         "day": "Thursday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/101,7/103,7/106,7/107,7/109,7/110,7/202,7/204,7/206,7/207"
       },
       {
         "day": "Monday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "EE Lab"
       },
       {
         "day": "Friday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "EE Lab"
       },
       {
         "day": "Wednesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "EE Lab"
       },
       {
         "day": "Thursday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "EE Lab"
       },
       {
         "day": "Friday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "EE Lab"
       }
     ]
   },
@@ -227,12 +257,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "10/103"
       },
       {
         "day": "Friday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "10/103"
       }
     ]
   },
@@ -244,12 +276,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "Jasubhai Auditorium"
       },
       {
         "day": "Monday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "Jasubhai Auditorium"
       }
     ]
   },
@@ -261,12 +295,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "Harsha Patel Learning Theatre"
       },
       {
         "day": "Monday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "Harsha Patel Learning Theatre"
       }
     ]
   },
@@ -278,17 +314,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/109"
       },
       {
         "day": "Friday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/109"
       },
       {
         "day": "Wednesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/109"
       }
     ]
   },
@@ -300,17 +339,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "10/103"
       },
       {
         "day": "Tuesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "10/105,Jasubhai Auditorium"
       },
       {
         "day": "Friday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "10/105,Jasubhai Auditorium"
       }
     ]
   },
@@ -322,17 +364,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "10/103"
       },
       {
         "day": "Friday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "10/103"
       },
       {
         "day": "Wednesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "Jagdish Patel Learning Theatre,7/106,7/107"
       }
     ]
   },
@@ -344,17 +389,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "Jayshree S Sheth Learning Theatre"
       },
       {
         "day": "Friday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "Jayshree S Sheth Learning Theatre"
       },
       {
         "day": "Wednesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "Surendra C Sheth Learning Theatre,7/201"
       }
     ]
   },
@@ -366,7 +414,8 @@ const SEMESTER_COURSES = [
       {
         "day": "Thursday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "Jagdish Patel Learning Theatre"
       }
     ]
   },
@@ -378,17 +427,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "Jagdish Patel Learning Theatre"
       },
       {
         "day": "Friday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "Jagdish Patel Learning Theatre"
       },
       {
         "day": "Wednesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "Jayshree S Sheth Learning Theatre,7/209"
       }
     ]
   },
@@ -400,12 +452,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "Jasubhai Auditorium, 7/101,7/102,7/103,7/104,7/201,7/207,7/208,7/209,11/101"
       },
       {
         "day": "Thursday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "Jasubhai Auditorium, 7/101,7/102,7/103,7/104,7/201,7/207,7/208,7/209,11/101"
       }
     ]
   },
@@ -417,17 +471,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/210"
       },
       {
         "day": "Friday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/210"
       },
       {
         "day": "Wednesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/101"
       }
     ]
   },
@@ -439,17 +496,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "Jagdish Patel Learning Theatre"
       },
       {
         "day": "Thursday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "Jagdish Patel Learning Theatre"
       },
       {
         "day": "Wednesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "Jagdish Patel Learning Theatre,11/101"
       }
     ]
   },
@@ -461,17 +521,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "Surendra C Sheth Learning Theatre"
       },
       {
         "day": "Friday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "Surendra C Sheth Learning Theatre"
       },
       {
         "day": "Friday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/208,7/209"
       }
     ]
   },
@@ -483,17 +546,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "Surendra C Sheth Learning Theatre"
       },
       {
         "day": "Friday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "Surendra C Sheth Learning Theatre"
       },
       {
         "day": "Monday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/203"
       }
     ]
   },
@@ -505,12 +571,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/108"
       },
       {
         "day": "Friday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/108"
       }
     ]
   },
@@ -522,17 +590,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "10/103"
       },
       {
         "day": "Tuesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "10/105,Jasubhai Auditorium"
       },
       {
         "day": "Friday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "10/105,Jasubhai Auditorium"
       }
     ]
   },
@@ -544,17 +615,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "Harsha Patel Learning Theatre"
       },
       {
         "day": "Wednesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "Harsha Patel Learning Theatre"
       },
       {
         "day": "Monday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "Harsha Patel Learning Theatre"
       }
     ]
   },
@@ -566,12 +640,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "10/102"
       },
       {
         "day": "Thursday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "10/102"
       }
     ]
   },
@@ -583,17 +659,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "Jasubhai Auditorium"
       },
       {
         "day": "Thursday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "Jasubhai Auditorium"
       },
       {
         "day": "Thursday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/101,7/210,7/103,7/104,7/105,7/201,7/204,7/205,7/202,7/203"
       }
     ]
   },
@@ -605,17 +684,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/106"
       },
       {
         "day": "Thursday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/106"
       },
       {
         "day": "Monday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/207"
       }
     ]
   },
@@ -627,12 +709,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "Harsha Patel Learning Theatre"
       },
       {
         "day": "Friday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "Harsha Patel Learning Theatre"
       }
     ]
   },
@@ -644,17 +728,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/209"
       },
       {
         "day": "Friday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/209"
       },
       {
         "day": "Wednesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/209"
       }
     ]
   },
@@ -666,17 +753,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "10/103"
       },
       {
         "day": "Friday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "10/103"
       },
       {
         "day": "Wednesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "Jagdish Patel Learning Theatre,7/106,7/107"
       }
     ]
   },
@@ -688,17 +778,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/208"
       },
       {
         "day": "Thursday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/208"
       },
       {
         "day": "Tuesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/102,7/105,7/107"
       }
     ]
   },
@@ -710,17 +803,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/101"
       },
       {
         "day": "Friday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/101"
       },
       {
         "day": "Wednesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/108"
       }
     ]
   },
@@ -732,17 +828,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "Jayshree S Sheth Learning Theatre"
       },
       {
         "day": "Friday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "Jayshree S Sheth Learning Theatre"
       },
       {
         "day": "Wednesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "Surendra C Sheth Learning Theatre,7/201"
       }
     ]
   },
@@ -754,12 +853,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "10/103,MSE Lab"
       },
       {
         "day": "Monday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "10/103,MSE Lab"
       }
     ]
   },
@@ -771,12 +872,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "11/101"
       },
       {
         "day": "Friday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "11/101"
       }
     ]
   },
@@ -788,22 +891,26 @@ const SEMESTER_COURSES = [
       {
         "day": "Thursday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "Jayshree S Sheth Learning Theatre"
       },
       {
         "day": "Friday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "Jayshree S Sheth Learning Theatre"
       },
       {
         "day": "Tuesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "10/104"
       },
       {
         "day": "Tuesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "10/104"
       }
     ]
   },
@@ -815,17 +922,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/109"
       },
       {
         "day": "Friday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/109"
       },
       {
         "day": "Wednesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/109"
       }
     ]
   },
@@ -837,22 +947,26 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "Surendra C Sheth Learning Theatre"
       },
       {
         "day": "Thursday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "Surendra C Sheth Learning Theatre"
       },
       {
         "day": "Monday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/208,7/209"
       },
       {
         "day": "Monday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "Surendra C Sheth Learning Theatre"
       }
     ]
   },
@@ -864,17 +978,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/209"
       },
       {
         "day": "Thursday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/209"
       },
       {
         "day": "Friday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/209"
       }
     ]
   },
@@ -886,17 +1003,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/109"
       },
       {
         "day": "Thursday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/109"
       },
       {
         "day": "Friday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "ME Lab"
       }
     ]
   },
@@ -908,17 +1028,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/101"
       },
       {
         "day": "Friday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/101"
       },
       {
         "day": "Monday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/101"
       }
     ]
   },
@@ -930,17 +1053,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "Harsha Patel Learning Theatre"
       },
       {
         "day": "Friday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "Harsha Patel Learning Theatre"
       },
       {
         "day": "Thursday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "Surendra C Sheth Learning Theatre"
       }
     ]
   },
@@ -952,22 +1078,26 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/210"
       },
       {
         "day": "Friday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/210"
       },
       {
         "day": "Tuesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/203"
       },
       {
         "day": "Monday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/202"
       }
     ]
   },
@@ -979,17 +1109,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/205"
       },
       {
         "day": "Thursday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/205"
       },
       {
         "day": "Monday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "MSE Lab"
       }
     ]
   },
@@ -1001,12 +1134,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/103"
       },
       {
         "day": "Thursday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/103"
       }
     ]
   },
@@ -1018,17 +1153,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/210"
       },
       {
         "day": "Friday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/210"
       },
       {
         "day": "Wednesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/101"
       }
     ]
   },
@@ -1040,17 +1178,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/105"
       },
       {
         "day": "Wednesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/105"
       },
       {
         "day": "Friday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "MSE Lab"
       }
     ]
   },
@@ -1062,17 +1203,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/208"
       },
       {
         "day": "Friday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/208"
       },
       {
         "day": "Wednesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/102,7/107"
       }
     ]
   },
@@ -1084,17 +1228,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "Jagdish Patel Learning Theatre"
       },
       {
         "day": "Wednesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "Jagdish Patel Learning Theatre"
       },
       {
         "day": "Monday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/202,7/108,7/109"
       }
     ]
   },
@@ -1106,17 +1253,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "Jagdish Patel Learning Theatre"
       },
       {
         "day": "Friday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "Jagdish Patel Learning Theatre"
       },
       {
         "day": "Tuesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "Jagdish Patel Learning Theatre,7/205,7/110"
       }
     ]
   },
@@ -1128,27 +1278,32 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "Jasubhai Auditorium"
       },
       {
         "day": "Thursday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "Jasubhai Auditorium"
       },
       {
         "day": "Monday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "11/101,7/209, 11/101,7/209, 11/102,Harsha Patel Learning Theatre"
       },
       {
         "day": "Friday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "11/101,7/209, 11/101,7/209, 11/102,Harsha Patel Learning Theatre"
       },
       {
         "day": "Friday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "11/101,7/209, 11/101,7/209, 11/102,Harsha Patel Learning Theatre"
       }
     ]
   },
@@ -1160,17 +1315,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "10/103"
       },
       {
         "day": "Friday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "10/103"
       },
       {
         "day": "Friday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "10/103,11/101,11/102"
       }
     ]
   },
@@ -1182,22 +1340,26 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "10/103"
       },
       {
         "day": "Thursday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "10/103"
       },
       {
         "day": "Monday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "10/103,Jayshree S Sheth Learning Theatre"
       },
       {
         "day": "Tuesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "10/103,Jayshree S Sheth Learning Theatre"
       }
     ]
   },
@@ -1209,27 +1371,32 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "Jasubhai Auditorium"
       },
       {
         "day": "Thursday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "Jasubhai Auditorium"
       },
       {
         "day": "Monday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "11/101,7/209, 11/101,7/209, 11/102,Harsha Patel Learning Theatre"
       },
       {
         "day": "Friday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "11/101,7/209, 11/101,7/209, 11/102,Harsha Patel Learning Theatre"
       },
       {
         "day": "Friday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "11/101,7/209, 11/101,7/209, 11/102,Harsha Patel Learning Theatre"
       }
     ]
   },
@@ -1241,12 +1408,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/107"
       },
       {
         "day": "Friday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/107"
       }
     ]
   },
@@ -1258,17 +1427,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/202"
       },
       {
         "day": "Monday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "10/104"
       },
       {
         "day": "Monday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "10/104"
       }
     ]
   },
@@ -1280,12 +1452,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/102"
       },
       {
         "day": "Thursday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/102"
       }
     ]
   },
@@ -1297,12 +1471,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "CL Lab"
       },
       {
         "day": "Tuesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "CL Lab"
       }
     ]
   },
@@ -1314,12 +1490,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/108"
       },
       {
         "day": "Thursday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/108"
       }
     ]
   },
@@ -1331,22 +1509,26 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/103"
       },
       {
         "day": "Friday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/103"
       },
       {
         "day": "Thursday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/206,7/102"
       },
       {
         "day": "Thursday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "CE Lab"
       }
     ]
   },
@@ -1358,22 +1540,26 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/206"
       },
       {
         "day": "Thursday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/206"
       },
       {
         "day": "Monday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "CE Lab"
       },
       {
         "day": "Monday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "CE Lab"
       }
     ]
   },
@@ -1385,12 +1571,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/209"
       },
       {
         "day": "Thursday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/209"
       }
     ]
   },
@@ -1402,27 +1590,32 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "Jasubhai Auditorium"
       },
       {
         "day": "Thursday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "Jasubhai Auditorium"
       },
       {
         "day": "Monday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "11/101,7/209, 11/101,7/209, 11/102,Harsha Patel Learning Theatre"
       },
       {
         "day": "Friday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "11/101,7/209, 11/101,7/209, 11/102,Harsha Patel Learning Theatre"
       },
       {
         "day": "Friday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "11/101,7/209, 11/101,7/209, 11/102,Harsha Patel Learning Theatre"
       }
     ]
   },
@@ -1434,17 +1627,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/208"
       },
       {
         "day": "Friday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/208"
       },
       {
         "day": "Thursday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/209"
       }
     ]
   },
@@ -1456,22 +1652,26 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "Surendra C Sheth Learning Theatre"
       },
       {
         "day": "Friday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "Surendra C Sheth Learning Theatre"
       },
       {
         "day": "Thursday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "Harsha Patel Learning Theatre"
       },
       {
         "day": "Thursday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "Harsha Patel Learning Theatre"
       }
     ]
   },
@@ -1483,17 +1683,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/208"
       },
       {
         "day": "Thursday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/208"
       },
       {
         "day": "Monday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "Makers Bhavan"
       }
     ]
   },
@@ -1505,12 +1708,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/109"
       },
       {
         "day": "Thursday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/109"
       }
     ]
   },
@@ -1522,12 +1727,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "Jagdish Patel Learning Theatre"
       },
       {
         "day": "Thursday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "Jagdish Patel Learning Theatre"
       }
     ]
   },
@@ -1539,7 +1746,8 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "13/124"
       }
     ]
   },
@@ -1551,22 +1759,26 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/110"
       },
       {
         "day": "Thursday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/110"
       },
       {
         "day": "Wednesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/110"
       },
       {
         "day": "Wednesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "MSE Lab"
       }
     ]
   },
@@ -1578,12 +1790,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/207,7/110"
       },
       {
         "day": "Friday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/207,7/110"
       }
     ]
   },
@@ -1595,22 +1809,26 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/207"
       },
       {
         "day": "Friday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/207"
       },
       {
         "day": "Tuesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "CE Lab"
       },
       {
         "day": "Tuesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "CE Lab"
       }
     ]
   },
@@ -1622,12 +1840,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/101"
       },
       {
         "day": "Friday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/101"
       }
     ]
   },
@@ -1639,12 +1859,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/107"
       },
       {
         "day": "Friday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/107"
       }
     ]
   },
@@ -1656,12 +1878,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "13/124"
       },
       {
         "day": "Friday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "13/124"
       }
     ]
   },
@@ -1673,12 +1897,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "13/124"
       },
       {
         "day": "Thursday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "13/124"
       }
     ]
   },
@@ -1690,12 +1916,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/204"
       },
       {
         "day": "Thursday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/204"
       }
     ]
   },
@@ -1707,12 +1935,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "11/206"
       },
       {
         "day": "Friday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "11/206"
       }
     ]
   },
@@ -1724,12 +1954,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/104"
       },
       {
         "day": "Thursday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/104"
       }
     ]
   },
@@ -1741,12 +1973,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "13/124"
       },
       {
         "day": "Friday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "13/124"
       }
     ]
   },
@@ -1758,12 +1992,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/203"
       },
       {
         "day": "Wednesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/203"
       }
     ]
   },
@@ -1775,12 +2011,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/102"
       },
       {
         "day": "Thursday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/102"
       }
     ]
   },
@@ -1792,12 +2030,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/202"
       },
       {
         "day": "Thursday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/202"
       }
     ]
   },
@@ -1809,7 +2049,8 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/208"
       }
     ]
   },
@@ -1821,12 +2062,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "10/102"
       },
       {
         "day": "Thursday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "10/102"
       }
     ]
   },
@@ -1838,12 +2081,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/103"
       },
       {
         "day": "Friday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/103"
       }
     ]
   },
@@ -1855,12 +2100,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "11/101"
       },
       {
         "day": "Thursday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "11/101"
       }
     ]
   },
@@ -1872,17 +2119,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "11/102"
       },
       {
         "day": "Thursday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "11/102"
       },
       {
         "day": "Monday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/207"
       }
     ]
   },
@@ -1894,12 +2144,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/201"
       },
       {
         "day": "Tuesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/201"
       }
     ]
   },
@@ -1911,12 +2163,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "11/206"
       },
       {
         "day": "Friday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "11/206"
       }
     ]
   },
@@ -1928,17 +2182,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/206"
       },
       {
         "day": "Wednesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/206"
       },
       {
         "day": "Tuesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/101"
       }
     ]
   },
@@ -1950,17 +2207,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "10/102"
       },
       {
         "day": "Thursday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "10/102"
       },
       {
         "day": "Wednesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/110"
       }
     ]
   },
@@ -1972,17 +2232,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/108"
       },
       {
         "day": "Thursday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/108"
       },
       {
         "day": "Wednesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/108"
       }
     ]
   },
@@ -1994,12 +2257,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "Jayshree S Sheth Learning Theatre"
       },
       {
         "day": "Thursday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "Jayshree S Sheth Learning Theatre"
       }
     ]
   },
@@ -2011,12 +2276,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/104"
       },
       {
         "day": "Thursday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/104"
       }
     ]
   },
@@ -2028,12 +2295,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/108"
       },
       {
         "day": "Thursday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/108"
       }
     ]
   },
@@ -2045,12 +2314,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "CH Lab"
       },
       {
         "day": "Monday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "CH Lab"
       }
     ]
   },
@@ -2062,12 +2333,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Friday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "CH Lab"
       },
       {
         "day": "Friday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "CH Lab"
       }
     ]
   },
@@ -2079,12 +2352,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "10/104"
       },
       {
         "day": "Wednesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "10/104"
       }
     ]
   },
@@ -2096,12 +2371,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Friday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "CH Lab"
       },
       {
         "day": "Monday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "CH Lab"
       }
     ]
   },
@@ -2113,12 +2390,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/110"
       },
       {
         "day": "Friday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/110"
       }
     ]
   },
@@ -2130,12 +2409,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/206"
       },
       {
         "day": "Thursday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/206"
       }
     ]
   },
@@ -2147,12 +2428,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/104"
       },
       {
         "day": "Friday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/104"
       }
     ]
   },
@@ -2164,12 +2447,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "11/204,11/205"
       },
       {
         "day": "Thursday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "11/204,11/205"
       }
     ]
   },
@@ -2181,12 +2466,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/110"
       },
       {
         "day": "Friday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/110"
       }
     ]
   },
@@ -2198,12 +2485,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/205"
       },
       {
         "day": "Friday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/205"
       }
     ]
   },
@@ -2215,12 +2504,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/105"
       },
       {
         "day": "Friday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/105"
       }
     ]
   },
@@ -2232,12 +2523,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "13/124"
       },
       {
         "day": "Thursday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "13/124"
       }
     ]
   },
@@ -2249,12 +2542,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "11/102"
       },
       {
         "day": "Thursday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "11/102"
       }
     ]
   },
@@ -2266,12 +2561,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "Harsha Patel Learning Theatre"
       },
       {
         "day": "Thursday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "Harsha Patel Learning Theatre"
       }
     ]
   },
@@ -2283,17 +2580,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/101"
       },
       {
         "day": "Tuesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "CH Lab"
       },
       {
         "day": "Thursday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "CH Lab"
       }
     ]
   },
@@ -2305,17 +2605,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/210"
       },
       {
         "day": "Tuesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "10/104"
       },
       {
         "day": "Thursday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "10/104"
       }
     ]
   },
@@ -2327,12 +2630,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "11/206"
       },
       {
         "day": "Thursday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "11/206"
       }
     ]
   },
@@ -2344,12 +2649,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/105"
       },
       {
         "day": "Wednesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/105"
       }
     ]
   },
@@ -2361,12 +2668,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/103"
       },
       {
         "day": "Wednesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/103"
       }
     ]
   },
@@ -2378,17 +2687,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/205"
       },
       {
         "day": "Thursday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/205"
       },
       {
         "day": "Tuesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/205"
       }
     ]
   },
@@ -2400,17 +2712,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/203"
       },
       {
         "day": "Friday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/203"
       },
       {
         "day": "Monday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/203"
       }
     ]
   },
@@ -2422,17 +2737,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/109"
       },
       {
         "day": "Friday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/109"
       },
       {
         "day": "Tuesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/108"
       }
     ]
   },
@@ -2444,12 +2762,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/102"
       },
       {
         "day": "Wednesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/102"
       }
     ]
   },
@@ -2461,17 +2781,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/108"
       },
       {
         "day": "Thursday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/108"
       },
       {
         "day": "Wednesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/202"
       }
     ]
   },
@@ -2483,17 +2806,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/209"
       },
       {
         "day": "Thursday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/209"
       },
       {
         "day": "Wednesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "10/203"
       }
     ]
   },
@@ -2505,12 +2831,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/110"
       },
       {
         "day": "Thursday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/110"
       }
     ]
   },
@@ -2522,17 +2850,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "Jayshree S Sheth Learning Theatre"
       },
       {
         "day": "Thursday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "Jayshree S Sheth Learning Theatre"
       },
       {
         "day": "Thursday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "5/202"
       }
     ]
   },
@@ -2544,12 +2875,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/103"
       },
       {
         "day": "Friday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/103"
       }
     ]
   },
@@ -2561,12 +2894,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/205"
       },
       {
         "day": "Friday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/205"
       }
     ]
   },
@@ -2578,12 +2913,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/208"
       },
       {
         "day": "Friday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/208"
       }
     ]
   },
@@ -2595,22 +2932,26 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/105"
       },
       {
         "day": "Friday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/105"
       },
       {
         "day": "Monday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/203"
       },
       {
         "day": "Thursday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/203"
       }
     ]
   },
@@ -2622,12 +2963,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/202"
       },
       {
         "day": "Friday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/202"
       }
     ]
   },
@@ -2639,12 +2982,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/108"
       },
       {
         "day": "Wednesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/108"
       }
     ]
   },
@@ -2656,17 +3001,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/105"
       },
       {
         "day": "Friday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/105"
       },
       {
         "day": "Thursday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/203"
       }
     ]
   },
@@ -2678,17 +3026,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/102"
       },
       {
         "day": "Friday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/102"
       },
       {
         "day": "Monday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/102"
       }
     ]
   },
@@ -2700,12 +3051,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/101"
       },
       {
         "day": "Thursday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/101"
       }
     ]
   },
@@ -2717,12 +3070,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/210"
       },
       {
         "day": "Thursday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/210"
       }
     ]
   },
@@ -2734,17 +3089,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "10/102"
       },
       {
         "day": "Friday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "10/102"
       },
       {
         "day": "Monday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/202"
       }
     ]
   },
@@ -2756,17 +3114,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/107"
       },
       {
         "day": "Tuesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "PH Lab"
       },
       {
         "day": "Tuesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "PH Lab"
       }
     ]
   },
@@ -2778,17 +3139,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/108"
       },
       {
         "day": "Friday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/108"
       },
       {
         "day": "Tuesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/208"
       }
     ]
   },
@@ -2800,22 +3164,26 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/109"
       },
       {
         "day": "Thursday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/109"
       },
       {
         "day": "Monday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "10/204"
       },
       {
         "day": "Monday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "10/204"
       }
     ]
   },
@@ -2827,12 +3195,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/204"
       },
       {
         "day": "Thursday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/204"
       }
     ]
   },
@@ -2844,17 +3214,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/209"
       },
       {
         "day": "Friday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/209"
       },
       {
         "day": "Monday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/209"
       }
     ]
   },
@@ -2866,12 +3239,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/206"
       },
       {
         "day": "Monday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/206"
       }
     ]
   },
@@ -2883,12 +3258,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "11/205"
       },
       {
         "day": "Friday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "11/205"
       }
     ]
   },
@@ -2900,12 +3277,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "5/202"
       },
       {
         "day": "Thursday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "5/202"
       }
     ]
   },
@@ -2917,12 +3296,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/207"
       },
       {
         "day": "Thursday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/207"
       }
     ]
   },
@@ -2934,12 +3315,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "11/206"
       },
       {
         "day": "Thursday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "11/206"
       }
     ]
   },
@@ -2951,12 +3334,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/110"
       },
       {
         "day": "Thursday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/110"
       }
     ]
   },
@@ -2968,12 +3353,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/205"
       },
       {
         "day": "Wednesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/205"
       }
     ]
   },
@@ -2985,12 +3372,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/206"
       },
       {
         "day": "Thursday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/206"
       }
     ]
   },
@@ -3002,17 +3391,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "Jayshree S Sheth Learning Theatre"
       },
       {
         "day": "Wednesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "Jayshree S Sheth Learning Theatre"
       },
       {
         "day": "Wednesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "Jayshree S Sheth Learning Theatre"
       }
     ]
   },
@@ -3024,17 +3416,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Friday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "Surendra C Sheth Learning Theatre"
       },
       {
         "day": "Thursday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "Jayshree S Sheth Learning Theatre"
       },
       {
         "day": "Thursday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "Jayshree S Sheth Learning Theatre"
       }
     ]
   },
@@ -3046,12 +3441,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/208"
       },
       {
         "day": "Wednesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/208"
       }
     ]
   },
@@ -3063,17 +3460,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/201"
       },
       {
         "day": "Thursday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/201"
       },
       {
         "day": "Wednesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/106"
       }
     ]
   },
@@ -3085,12 +3485,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/102"
       },
       {
         "day": "Wednesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/102"
       }
     ]
   },
@@ -3102,17 +3504,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "11/102"
       },
       {
         "day": "Friday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "11/102"
       },
       {
         "day": "Tuesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "11/102"
       }
     ]
   },
@@ -3124,12 +3529,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/209"
       },
       {
         "day": "Thursday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/209"
       }
     ]
   },
@@ -3141,12 +3548,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "11/102"
       },
       {
         "day": "Thursday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "11/102"
       }
     ]
   },
@@ -3158,12 +3567,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/108"
       },
       {
         "day": "Wednesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/108"
       }
     ]
   },
@@ -3175,12 +3586,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "Surendra C Sheth Learning Theatre"
       },
       {
         "day": "Thursday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "Surendra C Sheth Learning Theatre"
       }
     ]
   },
@@ -3192,17 +3605,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/106"
       },
       {
         "day": "Thursday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/106"
       },
       {
         "day": "Tuesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/106"
       }
     ]
   },
@@ -3214,12 +3630,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/204"
       },
       {
         "day": "Friday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/204"
       }
     ]
   },
@@ -3231,12 +3649,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "11/101"
       },
       {
         "day": "Friday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "11/101"
       }
     ]
   },
@@ -3248,12 +3668,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/208"
       },
       {
         "day": "Wednesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/208"
       }
     ]
   },
@@ -3265,12 +3687,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/102"
       },
       {
         "day": "Friday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/102"
       }
     ]
   },
@@ -3282,12 +3706,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/104"
       },
       {
         "day": "Thursday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/104"
       }
     ]
   },
@@ -3299,17 +3725,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/103"
       },
       {
         "day": "Friday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/103"
       },
       {
         "day": "Tuesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "10/203"
       }
     ]
   },
@@ -3321,12 +3750,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/205"
       },
       {
         "day": "Thursday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/205"
       }
     ]
   },
@@ -3338,12 +3769,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/105"
       },
       {
         "day": "Friday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/105"
       }
     ]
   },
@@ -3355,12 +3788,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/108"
       },
       {
         "day": "Friday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/108"
       }
     ]
   },
@@ -3372,12 +3807,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/107"
       },
       {
         "day": "Thursday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/107"
       }
     ]
   },
@@ -3389,12 +3826,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/110"
       },
       {
         "day": "Wednesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/110"
       }
     ]
   },
@@ -3406,12 +3845,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "11/204"
       },
       {
         "day": "Friday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "11/204"
       }
     ]
   },
@@ -3423,12 +3864,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "11/101"
       },
       {
         "day": "Thursday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "11/101"
       }
     ]
   },
@@ -3440,12 +3883,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "11/101"
       },
       {
         "day": "Thursday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "11/101"
       }
     ]
   },
@@ -3457,12 +3902,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "11/205"
       },
       {
         "day": "Wednesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "11/205"
       }
     ]
   },
@@ -3474,12 +3921,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/206"
       },
       {
         "day": "Friday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/206"
       }
     ]
   },
@@ -3491,12 +3940,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/104"
       },
       {
         "day": "Friday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/104"
       }
     ]
   },
@@ -3508,12 +3959,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/201"
       },
       {
         "day": "Friday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/201"
       }
     ]
   },
@@ -3525,12 +3978,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "10/102"
       },
       {
         "day": "Friday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "10/102"
       }
     ]
   },
@@ -3542,12 +3997,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/209"
       },
       {
         "day": "Thursday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/209"
       }
     ]
   },
@@ -3559,12 +4016,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/203"
       },
       {
         "day": "Thursday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/203"
       }
     ]
   },
@@ -3576,12 +4035,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/204"
       },
       {
         "day": "Friday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/204"
       }
     ]
   },
@@ -3593,12 +4054,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/204"
       },
       {
         "day": "Friday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/204"
       }
     ]
   },
@@ -3610,12 +4073,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/201"
       },
       {
         "day": "Friday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/201"
       }
     ]
   },
@@ -3627,12 +4092,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "Jagdish Patel Learning Theatre"
       },
       {
         "day": "Thursday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "Jagdish Patel Learning Theatre"
       }
     ]
   },
@@ -3644,12 +4111,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/204"
       },
       {
         "day": "Tuesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/204"
       }
     ]
   },
@@ -3661,17 +4130,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/101"
       },
       {
         "day": "Friday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/203"
       },
       {
         "day": "Friday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/203"
       }
     ]
   },
@@ -3683,12 +4155,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "11/101"
       },
       {
         "day": "Thursday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "11/101"
       }
     ]
   },
@@ -3700,12 +4174,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/109"
       },
       {
         "day": "Friday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/109"
       }
     ]
   },
@@ -3717,12 +4193,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/208"
       },
       {
         "day": "Thursday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/208"
       }
     ]
   },
@@ -3734,12 +4212,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "Surendra C Sheth Learning Theatre"
       },
       {
         "day": "Thursday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "Surendra C Sheth Learning Theatre"
       }
     ]
   },
@@ -3751,12 +4231,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "Online"
       },
       {
         "day": "Friday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "Online"
       }
     ]
   },
@@ -3768,12 +4250,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/207"
       },
       {
         "day": "Friday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/207"
       }
     ]
   },
@@ -3785,12 +4269,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/206"
       },
       {
         "day": "Friday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/206"
       }
     ]
   },
@@ -3802,12 +4288,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/110"
       },
       {
         "day": "Friday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/110"
       }
     ]
   },
@@ -3819,12 +4307,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/102"
       },
       {
         "day": "Friday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/102"
       }
     ]
   },
@@ -3836,12 +4326,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/110"
       },
       {
         "day": "Wednesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/110"
       }
     ]
   },
@@ -3853,12 +4345,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "10/102"
       },
       {
         "day": "Thursday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "10/102"
       }
     ]
   },
@@ -3870,12 +4364,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/207"
       },
       {
         "day": "Friday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/207"
       }
     ]
   },
@@ -3887,12 +4383,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "10/102"
       },
       {
         "day": "Thursday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "10/102"
       }
     ]
   },
@@ -3904,12 +4402,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "11/102"
       },
       {
         "day": "Thursday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "11/102"
       }
     ]
   },
@@ -3921,12 +4421,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/208"
       },
       {
         "day": "Thursday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/208"
       }
     ]
   },
@@ -3938,12 +4440,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "11/101"
       },
       {
         "day": "Friday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "11/101"
       }
     ]
   },
@@ -3955,12 +4459,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/202"
       },
       {
         "day": "Friday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/202"
       }
     ]
   },
@@ -3972,12 +4478,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/109"
       },
       {
         "day": "Friday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/109"
       }
     ]
   },
@@ -3989,12 +4497,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/104"
       },
       {
         "day": "Friday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/104"
       }
     ]
   },
@@ -4006,17 +4516,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "11/206"
       },
       {
         "day": "Wednesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "11/206"
       },
       {
         "day": "Monday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "BE Lab"
       }
     ]
   },
@@ -4028,12 +4541,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "13/125"
       },
       {
         "day": "Thursday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "13/125"
       }
     ]
   },
@@ -4045,12 +4560,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "13/124"
       },
       {
         "day": "Thursday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "13/124"
       }
     ]
   },
@@ -4062,17 +4579,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/206"
       },
       {
         "day": "Wednesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/109"
       },
       {
         "day": "Wednesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/109"
       }
     ]
   },
@@ -4084,12 +4604,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/105"
       },
       {
         "day": "Thursday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/105"
       }
     ]
   },
@@ -4101,12 +4623,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/205,7/206"
       },
       {
         "day": "Friday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/205,7/206"
       }
     ]
   },
@@ -4118,12 +4642,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/105"
       },
       {
         "day": "Friday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/105"
       }
     ]
   },
@@ -4135,17 +4661,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "13/124"
       },
       {
         "day": "Wednesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "13/124"
       },
       {
         "day": "Wednesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "BE Lab"
       }
     ]
   },
@@ -4157,12 +4686,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/106"
       },
       {
         "day": "Wednesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/106"
       }
     ]
   },
@@ -4174,17 +4705,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/205"
       },
       {
         "day": "Wednesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "BE Lab"
       },
       {
         "day": "Wednesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "BE Lab"
       }
     ]
   },
@@ -4196,12 +4730,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "BE Lab"
       },
       {
         "day": "Monday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "BE Lab"
       }
     ]
   },
@@ -4213,12 +4749,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "Jayshree S Sheth Learning Theatre"
       },
       {
         "day": "Friday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "Jayshree S Sheth Learning Theatre"
       }
     ]
   },
@@ -4230,12 +4768,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/108"
       },
       {
         "day": "Thursday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/108"
       }
     ]
   },
@@ -4247,12 +4787,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "Jagdish Patel Learning Theatre"
       },
       {
         "day": "Thursday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "Jagdish Patel Learning Theatre"
       }
     ]
   },
@@ -4264,12 +4806,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/207"
       },
       {
         "day": "Friday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/207"
       }
     ]
   },
@@ -4281,12 +4825,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/203"
       },
       {
         "day": "Thursday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/108"
       }
     ]
   },
@@ -4298,12 +4844,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/202"
       },
       {
         "day": "Friday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/202"
       }
     ]
   },
@@ -4315,12 +4863,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/109"
       },
       {
         "day": "Friday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/109"
       }
     ]
   },
@@ -4332,12 +4882,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/110"
       },
       {
         "day": "Friday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/110"
       }
     ]
   },
@@ -4349,12 +4901,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/106"
       },
       {
         "day": "Thursday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/106"
       }
     ]
   },
@@ -4366,12 +4920,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/105"
       },
       {
         "day": "Thursday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/105"
       }
     ]
   },
@@ -4383,17 +4939,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/106"
       },
       {
         "day": "Thursday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/106"
       },
       {
         "day": "Monday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/202"
       }
     ]
   },
@@ -4405,12 +4964,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/203"
       },
       {
         "day": "Thursday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/203"
       }
     ]
   },
@@ -4422,17 +4983,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "11/101"
       },
       {
         "day": "Wednesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "10/203"
       },
       {
         "day": "Thursday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "10/203"
       }
     ]
   },
@@ -4444,17 +5008,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "Surendra C Sheth Learning Theatre"
       },
       {
         "day": "Friday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "Surendra C Sheth Learning Theatre"
       },
       {
         "day": "Thursday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "10/203,10/204"
       }
     ]
   },
@@ -4466,17 +5033,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "10/103"
       },
       {
         "day": "Friday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "10/103"
       },
       {
         "day": "Friday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "10/103,11/101,11/102"
       }
     ]
   },
@@ -4488,22 +5058,26 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "10/103"
       },
       {
         "day": "Thursday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "10/103"
       },
       {
         "day": "Monday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "10/103,Jayshree S Sheth Learning Theatre"
       },
       {
         "day": "Tuesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "10/103,Jayshree S Sheth Learning Theatre"
       }
     ]
   },
@@ -4515,22 +5089,26 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "10/103"
       },
       {
         "day": "Thursday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "10/103"
       },
       {
         "day": "Monday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "10/103,Jayshree S Sheth Learning Theatre"
       },
       {
         "day": "Tuesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "10/103,Jayshree S Sheth Learning Theatre"
       }
     ]
   },
@@ -4542,22 +5120,26 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "10/103"
       },
       {
         "day": "Thursday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "10/103"
       },
       {
         "day": "Monday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "10/103,Jayshree S Sheth Learning Theatre"
       },
       {
         "day": "Tuesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "10/103,Jayshree S Sheth Learning Theatre"
       }
     ]
   },
@@ -4569,12 +5151,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/110"
       },
       {
         "day": "Thursday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/110"
       }
     ]
   },
@@ -4586,17 +5170,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/103"
       },
       {
         "day": "Friday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/103"
       },
       {
         "day": "Monday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "10/104"
       }
     ]
   },
@@ -4608,12 +5195,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "13/125"
       },
       {
         "day": "Friday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "13/125"
       }
     ]
   },
@@ -4625,12 +5214,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/208"
       },
       {
         "day": "Thursday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/208"
       }
     ]
   },
@@ -4642,12 +5233,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "11/101"
       },
       {
         "day": "Thursday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "11/101"
       }
     ]
   },
@@ -4659,12 +5252,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/101"
       },
       {
         "day": "Thursday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/101"
       }
     ]
   },
@@ -4676,12 +5271,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/109"
       },
       {
         "day": "Wednesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/109"
       }
     ]
   },
@@ -4693,12 +5290,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "10/103"
       },
       {
         "day": "Friday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "10/103"
       }
     ]
   },
@@ -4710,12 +5309,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "Surendra C Sheth Learning Theatre"
       },
       {
         "day": "Wednesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "Surendra C Sheth Learning Theatre"
       }
     ]
   },
@@ -4727,12 +5328,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/208"
       },
       {
         "day": "Friday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/208"
       }
     ]
   },
@@ -4744,12 +5347,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/105"
       },
       {
         "day": "Friday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/105"
       }
     ]
   },
@@ -4761,22 +5366,26 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "Jagdish Patel Learning Theatre"
       },
       {
         "day": "Friday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "Jagdish Patel Learning Theatre"
       },
       {
         "day": "Monday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "EE Lab"
       },
       {
         "day": "Thursday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "EE Lab"
       }
     ]
   },
@@ -4788,12 +5397,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/204"
       },
       {
         "day": "Friday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/204"
       }
     ]
   },
@@ -4805,12 +5416,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/101"
       },
       {
         "day": "Wednesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/101"
       }
     ]
   },
@@ -4822,12 +5435,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Friday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "10/104"
       },
       {
         "day": "Friday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "10/104"
       }
     ]
   },
@@ -4839,12 +5454,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "11/102"
       },
       {
         "day": "Friday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "11/102"
       }
     ]
   },
@@ -4856,17 +5473,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "11/102"
       },
       {
         "day": "Friday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "11/102"
       },
       {
         "day": "Tuesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "11/102"
       }
     ]
   },
@@ -4878,12 +5498,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "13/125"
       },
       {
         "day": "Thursday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "13/125"
       }
     ]
   },
@@ -4895,12 +5517,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "Jagdish Patel Learning Theatre"
       },
       {
         "day": "Monday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "10/105"
       }
     ]
   },
@@ -4912,12 +5536,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Thursday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "10/104"
       },
       {
         "day": "Thursday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "10/104"
       }
     ]
   },
@@ -4929,12 +5555,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "13/124"
       },
       {
         "day": "Thursday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "13/124"
       }
     ]
   },
@@ -4946,12 +5574,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "Surendra C Sheth Learning Theatre"
       },
       {
         "day": "Friday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "Surendra C Sheth Learning Theatre"
       }
     ]
   },
@@ -4963,12 +5593,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/210"
       },
       {
         "day": "Friday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/210"
       }
     ]
   },
@@ -4980,12 +5612,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "11/101"
       },
       {
         "day": "Wednesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "11/101"
       }
     ]
   },
@@ -4997,12 +5631,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "10/102"
       },
       {
         "day": "Thursday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "10/102"
       }
     ]
   },
@@ -5014,12 +5650,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "11/206"
       },
       {
         "day": "Friday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "11/206"
       }
     ]
   },
@@ -5031,12 +5669,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "10/102"
       },
       {
         "day": "Wednesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "10/102"
       }
     ]
   },
@@ -5048,12 +5688,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "13/124"
       },
       {
         "day": "Thursday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "13/124"
       }
     ]
   },
@@ -5065,17 +5707,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/105"
       },
       {
         "day": "Friday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/105"
       },
       {
         "day": "Wednesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "13/125"
       }
     ]
   },
@@ -5087,17 +5732,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "11/205"
       },
       {
         "day": "Friday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "11/205"
       },
       {
         "day": "Tuesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "11/205"
       }
     ]
   },
@@ -5109,12 +5757,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/103"
       },
       {
         "day": "Thursday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/103"
       }
     ]
   },
@@ -5126,12 +5776,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "11/204"
       },
       {
         "day": "Thursday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "11/204"
       }
     ]
   },
@@ -5143,12 +5795,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/210"
       },
       {
         "day": "Friday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/210"
       }
     ]
   },
@@ -5160,12 +5814,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "11/102"
       },
       {
         "day": "Wednesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "11/102"
       }
     ]
   },
@@ -5177,12 +5833,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/205"
       },
       {
         "day": "Friday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/205"
       }
     ]
   },
@@ -5194,17 +5852,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/104"
       },
       {
         "day": "Friday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "10/105"
       },
       {
         "day": "Friday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "10/105"
       }
     ]
   },
@@ -5216,17 +5877,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/103"
       },
       {
         "day": "Friday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/103"
       },
       {
         "day": "Monday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "10/102"
       }
     ]
   },
@@ -5238,12 +5902,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/103"
       },
       {
         "day": "Friday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/103"
       }
     ]
   },
@@ -5255,12 +5921,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "11/206"
       },
       {
         "day": "Thursday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "11/206"
       }
     ]
   },
@@ -5272,12 +5940,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/107"
       },
       {
         "day": "Thursday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/107"
       }
     ]
   },
@@ -5289,12 +5959,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/210"
       },
       {
         "day": "Thursday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/210"
       }
     ]
   },
@@ -5306,12 +5978,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "10/103"
       },
       {
         "day": "Friday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "10/103"
       }
     ]
   },
@@ -5323,12 +5997,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/210"
       },
       {
         "day": "Thursday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/210"
       }
     ]
   },
@@ -5340,17 +6016,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "11/204"
       },
       {
         "day": "Friday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/206"
       },
       {
         "day": "Tuesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/206"
       }
     ]
   },
@@ -5362,12 +6041,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/201"
       },
       {
         "day": "Friday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/201"
       }
     ]
   },
@@ -5379,17 +6060,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/101"
       },
       {
         "day": "Friday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/101"
       },
       {
         "day": "Tuesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "7/101"
       }
     ]
   },
@@ -5401,12 +6085,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "11/204"
       },
       {
         "day": "Thursday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "11/204"
       }
     ]
   },
@@ -5418,12 +6104,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/202"
       },
       {
         "day": "Thursday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/202"
       }
     ]
   },
@@ -5435,17 +6123,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "13/125"
       },
       {
         "day": "Wednesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "EH Lab"
       },
       {
         "day": "Wednesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "EH Lab"
       }
     ]
   },
@@ -5457,17 +6148,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Friday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/104"
       },
       {
         "day": "Wednesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "EH Lab"
       },
       {
         "day": "Wednesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "EH Lab"
       }
     ]
   },
@@ -5479,12 +6173,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "13/125"
       },
       {
         "day": "Thursday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "13/125"
       }
     ]
   },
@@ -5496,12 +6192,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "11/204"
       },
       {
         "day": "Wednesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "11/204"
       }
     ]
   },
@@ -5513,12 +6211,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "13/125"
       },
       {
         "day": "Thursday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "13/125"
       }
     ]
   },
@@ -5530,17 +6230,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/104"
       },
       {
         "day": "Wednesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/104"
       },
       {
         "day": "Tuesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "10/105"
       }
     ]
   },
@@ -5552,12 +6255,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/101"
       },
       {
         "day": "Thursday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/101"
       }
     ]
   },
@@ -5569,12 +6274,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/104"
       },
       {
         "day": "Friday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/104"
       }
     ]
   },
@@ -5586,12 +6293,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "11/204"
       },
       {
         "day": "Friday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "11/204"
       }
     ]
   },
@@ -5603,12 +6312,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/105"
       },
       {
         "day": "Friday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/105"
       }
     ]
   },
@@ -5620,12 +6331,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/207"
       },
       {
         "day": "Friday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "7/207"
       }
     ]
   },
@@ -5637,17 +6350,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/107"
       },
       {
         "day": "Monday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/107"
       },
       {
         "day": "Monday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/107"
       }
     ]
   },
@@ -5659,17 +6375,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/102"
       },
       {
         "day": "Friday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/102"
       },
       {
         "day": "Wednesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/202"
       }
     ]
   },
@@ -5681,12 +6400,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "Jagdish Patel Learning Theatre"
       },
       {
         "day": "Thursday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "Jagdish Patel Learning Theatre"
       }
     ]
   },
@@ -5698,12 +6419,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/106"
       },
       {
         "day": "Friday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/106"
       }
     ]
   },
@@ -5715,17 +6438,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/109"
       },
       {
         "day": "Thursday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/109"
       },
       {
         "day": "Friday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/109"
       }
     ]
   },
@@ -5737,17 +6463,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/205"
       },
       {
         "day": "Friday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/205"
       },
       {
         "day": "Tuesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/201"
       }
     ]
   },
@@ -5759,17 +6488,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "Makers Bhavan"
       },
       {
         "day": "Monday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "Makers Bhavan"
       },
       {
         "day": "Monday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "Makers Bhavan"
       }
     ]
   },
@@ -5781,17 +6513,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/207"
       },
       {
         "day": "Thursday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/207"
       },
       {
         "day": "Monday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/207"
       }
     ]
   },
@@ -5803,12 +6538,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/102"
       },
       {
         "day": "Wednesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/102"
       }
     ]
   },
@@ -5820,12 +6557,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/202"
       },
       {
         "day": "Friday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/202"
       }
     ]
   },
@@ -5837,7 +6576,8 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "6:30 PM to 7:50 PM, 7/104"
       }
     ]
   },
@@ -5849,17 +6589,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/207"
       },
       {
         "day": "Thursday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "7/207"
       },
       {
         "day": "Monday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "7/207"
       }
     ]
   },
@@ -5871,17 +6614,20 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "7/206"
       },
       {
         "day": "Thursday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "ME Lab"
       },
       {
         "day": "Thursday",
         "start": "15:30",
-        "end": "16:50"
+        "end": "16:50",
+        "venue": "ME Lab"
       }
     ]
   },
@@ -5893,12 +6639,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "11/204"
       },
       {
         "day": "Thursday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "11/204"
       }
     ]
   },
@@ -5910,12 +6658,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "11/205"
       },
       {
         "day": "Thursday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "11/205"
       }
     ]
   },
@@ -5927,12 +6677,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "11/205"
       },
       {
         "day": "Wednesday",
         "start": "08:30",
-        "end": "09:50"
+        "end": "09:50",
+        "venue": "11/205"
       }
     ]
   },
@@ -5944,12 +6696,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Wednesday",
         "start": "10:00",
-        "end": "11:20"
+        "end": "11:20",
+        "venue": "11/205"
       },
       {
         "day": "Friday",
         "start": "14:00",
-        "end": "15:20"
+        "end": "15:20",
+        "venue": "11/205"
       }
     ]
   },
@@ -5961,12 +6715,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/106"
       },
       {
         "day": "Thursday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/106"
       }
     ]
   },
@@ -5978,12 +6734,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Tuesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/106"
       },
       {
         "day": "Friday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "7/106"
       }
     ]
   },
@@ -5995,12 +6753,14 @@ const SEMESTER_COURSES = [
       {
         "day": "Monday",
         "start": "17:00",
-        "end": "18:20"
+        "end": "18:20",
+        "venue": "11/102"
       },
       {
         "day": "Wednesday",
         "start": "11:30",
-        "end": "12:50"
+        "end": "12:50",
+        "venue": "11/102"
       }
     ]
   }
