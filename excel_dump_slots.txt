@@ -1,0 +1,16 @@
+Reading sheet: Time Slots
+
+Columns:
+['Slot', 'M', 'T', 'W', 'Th', 'F']
+
+First 20 rows:
+                                                                                                                                                                                                                                                                                          Slot            M    T    W   Th    F
+0                                                                                                                                                                                                                                                                                  8:30 – 9:50           A1   B1   A2   C2   B2
+1                                                                                                                                                                                                                                                                                10:00 - 11:20           C1   D1   E1   D2   E2
+2                                                                                                                                                                                                                                                                                11:30 - 12:50           F1   G1   H2   F2   G2
+3                                                                                                                                                                                                                                                                                13:00 - 14:00  Lunch Break  NaN  NaN  NaN  NaN
+4                                                                                                                                                                                                                                                                                14:00 - 15:20           I1   J1   I2   K2   J2
+5                                                                                                                                                                                                                                                                                15:30 - 16:50           K1   L1   M1   L2   M2
+6                                                                                                                                                                                                                                                                                17:00 - 18:20           H1   N1   P1   N2   P2
+7                                                                                                                                                                                                                                                                                          NaN          NaN  NaN  NaN  NaN  NaN
+8  Room (name),capacity\n1/103 (Jibaben Patel Memorial Auditorium),280\n2/101 (Jasubhai Auditorium),550\n1/101 (Surendra C Sheth Learning Theatre),150\n1/102 (Jayshree S Sheth Learning Theatre),150\n10/201 (Jagdish Patel Learning Theatre),150\n10/202 (Harsha Patel Learning Theatre),150          NaN  NaN  NaN  NaN  NaN
