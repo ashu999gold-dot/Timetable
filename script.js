@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Apply temporary capture styles
             captureArea.style.padding = '30px';
-            captureArea.style.background = '#1e1e2e';
+            captureArea.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
             captureArea.style.borderRadius = '20px';
 
             // CRITICAL: Expand all cards to show full venue text for image
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 html2canvas(captureArea, {
                     scale: 3, // Very high quality
-                    backgroundColor: '#1e1e2e',
+                    backgroundColor: '#764ba2',
                     useCORS: true,
                     logging: false
                 }).then(canvas => {
