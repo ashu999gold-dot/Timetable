@@ -186,8 +186,27 @@ document.addEventListener('DOMContentLoaded', () => {
             if (action === 'calendar') handleCalendarExport();
             if (action === 'share') handleShareLink();
             if (action === 'qr') handleQRGen();
+            if (action === 'save') handleSaveTemplate();
         });
     });
+
+    function handleSaveTemplate() {
+        if (selectedCourses.size === 0) return alert("Add some courses first!");
+        const data = Array.from(selectedCourses.values());
+        localStorage.setItem('saved_timetable', JSON.stringify(data));
+        alert("✨ Schedule saved! It will load automatically next time.");
+    }
+
+    // Auto-load template
+    const saved = localStorage.getItem('saved_timetable');
+    if (saved) {
+        try {
+            const data = JSON.parse(saved);
+            data.forEach(c => selectedCourses.set(c.code, c));
+            updateSelectedList();
+            renderTimetable();
+        } catch (e) { console.error("Load failed", e); }
+    }
 
     function handleImageExport() {
         const btn = document.querySelector('.export-option[data-action="image"]');
@@ -270,9 +289,45 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        // Simple ICS generation (very basic for demo)
-        alert("Generating .ics file for " + events.length + " events...");
-        // In a real app, use a library or more complex logic to generate RFC 5545
+        if (events.length === 0) return alert("Add courses first!");
+
+        let ics = "BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//Timetable AI//EN\n";
+
+        // This is a simplified ICS generator
+        const dayMap = { 'Monday': 0, 'Tuesday': 1, 'Wednesday': 2, 'Thursday': 3, 'Friday': 4 };
+        const now = new Date();
+        // Start from next Monday
+        const start = new Date(now.setDate(now.getDate() + ((7 - now.getDay() + 1) % 7 || 7)));
+
+        events.forEach(e => {
+            const dayOffset = dayMap[e.day];
+            const eventDate = new Date(start);
+            eventDate.setDate(start.getDate() + dayOffset);
+
+            const formatICSDate = (date, time) => {
+                const [h, m] = time.split(':');
+                const d = new Date(date);
+                d.setHours(h, m, 0);
+                return d.toISOString().replace(/[-:]/g, "").split(".")[0] + "Z";
+            };
+
+            ics += "BEGIN:VEVENT\n";
+            ics += `SUMMARY:${e.title}\n`;
+            ics += `LOCATION:${e.location}\n`;
+            ics += `DTSTART:${formatICSDate(eventDate, e.start)}\n`;
+            ics += `DTEND:${formatICSDate(eventDate, e.end)}\n`;
+            ics += "RRULE:FREQ=WEEKLY;UNTIL=20261231T235959Z\n"; // Repeat until end of year
+            ics += "END:VEVENT\n";
+        });
+
+        ics += "END:VCALENDAR";
+
+        const blob = new Blob([ics], { type: 'text/calendar' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = "my-timetable.ics";
+        a.click();
     }
 
     function handleShareLink() {
