@@ -153,60 +153,71 @@ const StudyOptimizer = {
     generateInsights(workload, gaps, days) {
         const insights = [];
 
-        // Weekly stats
+        // 1. Core Stats
         const totalHours = days.reduce((sum, day) => sum + parseFloat(workload[day].totalHours), 0);
         const totalClasses = days.reduce((sum, day) => sum + workload[day].classCount, 0);
 
         insights.push({
             icon: '📚',
-            title: 'Weekly Workload',
-            value: `${totalHours.toFixed(1)} hours`,
-            detail: `${totalClasses} classes across ${days.length} days`,
+            title: 'Weekly Intensity',
+            value: `${totalHours.toFixed(1)} hrs`,
+            detail: `${totalClasses} classes this week`,
             type: 'info'
         });
 
-        // Busiest day
-        const busiestDay = days.reduce((max, day) =>
-            workload[day].totalMinutes > workload[max].totalMinutes ? day : max
-        );
-        insights.push({
-            icon: '⚡',
-            title: 'Busiest Day',
-            value: busiestDay,
-            detail: `${workload[busiestDay].totalHours}h of classes`,
-            type: 'warning'
-        });
-
-        // Free time
-        const totalFreeTime = gaps.reduce((sum, gap) => sum + gap.duration, 0);
-        insights.push({
-            icon: '🕐',
-            title: 'Total Free Time',
-            value: AIUtils.formatDuration(totalFreeTime),
-            detail: `${gaps.length} gaps between classes`,
-            type: 'success'
-        });
-
-        // Focus blocks
-        const focusBlocks = gaps.filter(g => g.duration >= 120).length;
-        if (focusBlocks > 0) {
+        // 2. Productivity Peak (AI Insight)
+        const morningGaps = gaps.filter(g => AIUtils.getTimeOfDay(g.start) === 'morning' && g.duration >= 90);
+        if (morningGaps.length > 0) {
             insights.push({
-                icon: '🎯',
-                title: 'Focus Blocks',
-                value: focusBlocks,
-                detail: '2+ hour blocks for deep work',
+                icon: '🚀',
+                title: 'Peak Productivity',
+                value: 'Early Riser',
+                detail: 'Morning gaps detected - best for deep learning',
                 type: 'success'
+            });
+        } else {
+            insights.push({
+                icon: '🌙',
+                title: 'Peak Productivity',
+                value: 'Night Owl',
+                detail: 'Condensed morning - focus energy on evening review',
+                type: 'info'
             });
         }
 
-        // Workload warning
-        const overloadDays = days.filter(day => workload[day].level === 'overload').length;
+        // 3. Schedule Resilience (How well it handles delays)
+        const tightGaps = gaps.filter(g => g.duration < 15).length;
+        const resilience = tightGaps > 3 ? 'Low' : tightGaps > 0 ? 'Medium' : 'High';
+        insights.push({
+            icon: '🛡️',
+            title: 'Schedule Resilience',
+            value: resilience,
+            detail: tightGaps > 0 ? `${tightGaps} back-to-back transitions` : 'Spacious and stress-free',
+            type: resilience === 'High' ? 'success' : resilience === 'Medium' ? 'warning' : 'danger'
+        });
+
+        // 4. Busiest day analysis
+        const busiestDay = days.reduce((max, day) =>
+            workload[day].totalMinutes > workload[max].totalMinutes ? day : max
+        );
+        if (workload[busiestDay].totalMinutes > 0) {
+            insights.push({
+                icon: '⚡',
+                title: 'Intensity Peak',
+                value: busiestDay,
+                detail: `${workload[busiestDay].totalHours}h class load`,
+                type: 'warning'
+            });
+        }
+
+        // 5. Workload warning
+        const overloadDays = days.filter(day => workload[day].level === 'overload' || workload[day].level === 'heavy').length;
         if (overloadDays > 0) {
             insights.push({
                 icon: '⚠️',
-                title: 'Burnout Alert',
-                value: `${overloadDays} day(s)`,
-                detail: 'Consider reducing course load',
+                title: 'Burnout Risk',
+                value: overloadDays > 1 ? 'Elevated' : 'Moderate',
+                detail: `${overloadDays} high-pressure days`,
                 type: 'danger'
             });
         }
