@@ -86,27 +86,27 @@ const Analytics = {
         const recs = [];
 
         // Check for overload
-        const overloadDays = days.filter(day => workload[day].level === 'overload');
+        const overloadDays = days.filter(day => workload[day].level === 'overload' || workload[day].level === 'heavy');
         if (overloadDays.length > 0) {
             recs.push({
-                icon: '⚠️',
+                icon: '🔥',
                 type: 'warning',
-                title: 'Overloaded Schedule',
-                message: `${overloadDays.join(', ')} ${overloadDays.length > 1 ? 'are' : 'is'} overloaded (6+ hours). Consider reducing courses to prevent burnout.`
+                title: 'Intensity Alert',
+                message: `${overloadDays.join(', ')} ${overloadDays.length > 1 ? 'are' : 'is'} quite intense. AI recommends scheduling extra breaks these days.`
             });
         }
 
         // Check for imbalance
-        if (balanceScore < 60) {
-            const lightDays = days.filter(day => workload[day].level === 'light' || workload[day].level === 'free');
+        if (balanceScore < 70) {
+            const lightDays = days.filter(day => workload[day].totalMinutes > 0 && (workload[day].level === 'light' || workload[day].level === 'moderate'));
             const heavyDays = days.filter(day => workload[day].level === 'heavy' || workload[day].level === 'overload');
 
             if (lightDays.length > 0 && heavyDays.length > 0) {
                 recs.push({
                     icon: '⚖️',
                     type: 'info',
-                    title: 'Unbalanced Distribution',
-                    message: `Try to spread courses more evenly. ${heavyDays.join(', ')} ${heavyDays.length > 1 ? 'are' : 'is'} heavy while ${lightDays.join(', ')} ${lightDays.length > 1 ? 'are' : 'is'} light.`
+                    title: 'Strategic Shift',
+                    message: `Consider moving a class from ${heavyDays[0]} to ${lightDays[0]} to reach peak productivity.`
                 });
             }
         }

@@ -487,7 +487,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="workload-chart">
                     ${data.distribution.map(d => `
                         <div class="chart-bar-wrapper">
-                            <div class="chart-bar" style="height: ${d.percentage}%; background: ${d.color}" title="${d.hours}h"></div>
+                            <div class="chart-bar" style="height: ${Math.max(d.percentage, 2)}%; background: ${d.color}" 
+                                 title="${d.hours}h of classes">
+                             </div>
                             <span class="chart-label">${d.day.substring(0, 3)}</span>
                         </div>
                     `).join('')}

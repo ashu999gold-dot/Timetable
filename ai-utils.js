@@ -203,8 +203,9 @@ const AIUtils = {
         const stdDev = Math.sqrt(variance);
 
         // Convert to 0-100 score (lower stdDev = higher score)
-        const maxStdDev = 120; // 2 hours difference is considered poor balance
-        const score = Math.max(0, Math.min(100, 100 - (stdDev / maxStdDev * 100)));
+        // 90 minutes stdDev is considered poor balance for a student schedule
+        const maxStdDev = 90;
+        const score = Math.max(10, Math.min(100, 100 - (stdDev / maxStdDev * 90)));
 
         return Math.round(score);
     },
