@@ -2,14 +2,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- State ---
     const selectedCourses = new Map(); // id (code) -> courseObj
     const colors = [
-        'rgba(255, 0, 127, 0.9)',  // Vivid Pink
-        'rgba(0, 229, 255, 0.9)',  // Neon Blue
-        'rgba(0, 255, 135, 0.9)',  // Lush Green
-        'rgba(112, 0, 255, 0.9)',  // Electric Purple
-        'rgba(255, 140, 0, 0.9)',  // Bright Orange
-        'rgba(255, 215, 0, 0.9)',  // Gold
-        'rgba(0, 191, 255, 0.9)',  // Sky Blue
-        'rgba(255, 127, 80, 0.9)'   // Coral
+        '#FF007F', // Vivid Pink
+        '#00E5FF', // Neon Blue
+        '#39FF14', // Neon Green
+        '#7000FF', // Electric Purple
+        '#FF8C00', // Bright Orange
+        '#FFD700', // Gold
+        '#00BFFF', // Sky Blue
+        '#FF4500'  // Orange Red
     ];
 
     // --- Configuration ---
@@ -192,35 +192,68 @@ document.addEventListener('DOMContentLoaded', () => {
     function handleImageExport() {
         const btn = document.querySelector('.export-option[data-action="image"]');
         const oldText = btn.textContent;
-        btn.textContent = '⏳ Processing...';
+        btn.textContent = '⏳ Creating High-Vibrancy Image...';
 
-        // Visual feedback
-        captureArea.style.padding = '30px';
-        captureArea.style.background = 'linear-gradient(135deg, #24243e 0%, #0f0c29 100%)';
-        captureArea.style.borderRadius = '20px';
+        // Lighten the export background significantly
+        captureArea.style.padding = '40px';
+        captureArea.style.background = 'linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%)'; // Elegant light grey/white gradient
+        captureArea.style.borderRadius = '24px';
+        captureArea.style.boxShadow = '0 30px 60px rgba(0,0,0,0.15)';
+        captureArea.style.color = '#333'; // Darker text for the grid during capture
 
         const allCards = document.querySelectorAll('.course-card');
-        allCards.forEach(card => card.classList.add('export-mode'));
+        const gridCells = document.querySelectorAll('.grid-cell, .grid-header, .time-label');
+
+        allCards.forEach(card => {
+            card.classList.add('export-mode');
+            card.style.opacity = '1';
+            card.style.filter = 'brightness(1.1) contrast(1.1)';
+            card.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+        });
+
+        gridCells.forEach(cell => {
+            cell.style.borderColor = 'rgba(0,0,0,0.1)';
+            cell.style.color = '#444';
+        });
 
         setTimeout(() => {
             html2canvas(captureArea, {
-                scale: 2,
-                backgroundColor: '#0f0c29',
-                useCORS: true
+                scale: 3,
+                backgroundColor: '#ffffff',
+                useCORS: true,
+                logging: false,
+                onclone: (clonedDoc) => {
+                    // Force any missing styles in the clone
+                    clonedDoc.getElementById('capture-area').style.color = '#333';
+                }
             }).then(canvas => {
                 const link = document.createElement('a');
-                link.download = `timetable-${Date.now()}.png`;
-                link.href = canvas.toDataURL('image/png');
+                link.download = `Timetable-Pro-${Date.now()}.png`;
+                link.href = canvas.toDataURL('image/png', 1.0);
                 link.click();
 
                 // Cleanup
                 captureArea.style.padding = '';
                 captureArea.style.background = '';
                 captureArea.style.borderRadius = '';
-                allCards.forEach(card => card.classList.remove('export-mode'));
+                captureArea.style.boxShadow = '';
+                captureArea.style.color = '';
+
+                allCards.forEach(card => {
+                    card.classList.remove('export-mode');
+                    card.style.opacity = '';
+                    card.style.filter = '';
+                    card.style.boxShadow = '';
+                });
+
+                gridCells.forEach(cell => {
+                    cell.style.borderColor = '';
+                    cell.style.color = '';
+                });
+
                 btn.textContent = oldText;
             });
-        }, 100);
+        }, 500); // Wait for styles to settle
     }
 
     function handleCalendarExport() {
