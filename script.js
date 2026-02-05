@@ -2,14 +2,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- State ---
     const selectedCourses = new Map(); // id (code) -> courseObj
     const colors = [
-        '#FF007F', // Vivid Pink
-        '#00E5FF', // Neon Blue
-        '#39FF14', // Neon Green
-        '#7000FF', // Electric Purple
-        '#FF8C00', // Bright Orange
-        '#FFD700', // Gold
-        '#00BFFF', // Sky Blue
-        '#FF4500'  // Orange Red
+        'rgba(239, 71, 111, 0.85)',  // Sunset Pink
+        'rgba(255, 209, 102, 0.85)', // Sunray Yellow
+        'rgba(6, 214, 160, 0.85)',  // Caribbean Green
+        'rgba(17, 138, 178, 0.85)',  // Blue Lagoon
+        'rgba(162, 155, 254, 0.85)', // Lavender
+        'rgba(255, 118, 117, 0.85)', // Coral
+        'rgba(9, 132, 227, 0.85)',   // Electric Blue
+        'rgba(0, 184, 148, 0.85)'    // Jade
     ];
 
     // --- Configuration ---
