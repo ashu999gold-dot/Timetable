@@ -35,6 +35,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const timetableGrid = document.getElementById('timetable-grid');
     const captureArea = document.getElementById('capture-area');
 
+    // AI Related Elements
+    const voiceSearchBtn = document.getElementById('voice-search-btn');
+    const filterChips = document.querySelectorAll('.filter-chip');
+    const conflictPanel = document.getElementById('conflict-panel');
+    const conflictList = document.getElementById('conflict-list');
+    const aiRecommendations = document.getElementById('ai-recommendations');
+    const recommendationList = document.getElementById('recommendation-list');
+    const optimizeBtn = document.getElementById('optimize-btn');
+    const aiInsightsPanel = document.getElementById('ai-insights-panel');
+    const insightsContent = document.getElementById('insights-content');
+    const closeInsightsBtn = document.getElementById('close-insights');
+    const analyticsPanel = document.getElementById('analytics-panel');
+    const analyticsContent = document.getElementById('analytics-content');
+    const exportDropdownBtn = document.getElementById('export-dropdown-btn');
+    const exportMenu = document.getElementById('export-menu');
+    const exportOptions = document.querySelectorAll('.export-option');
+
     // --- Initialization ---
     initGrid();
 
@@ -42,23 +59,80 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Course Search
     if (typeof SEMESTER_COURSES !== 'undefined' && searchInput) {
-        searchInput.addEventListener('input', (e) => {
-            const query = e.target.value.toLowerCase().trim();
-            if (query.length < 2) {
+        let activeFilter = 'all';
+
+        const performSearch = () => {
+            const query = searchInput.value.toLowerCase().trim();
+            if (query.length < 2 && activeFilter === 'all') {
                 searchResults.classList.add('hidden');
                 return;
             }
-            const matched = SEMESTER_COURSES.filter(c =>
+
+            let filtered = SEMESTER_COURSES;
+
+            // Apply active time filter
+            if (activeFilter !== 'all') {
+                filtered = AIUtils.filterByTimePreference(filtered, activeFilter);
+            }
+
+            const matched = filtered.filter(c =>
                 c.name.toLowerCase().includes(query) ||
-                c.code.toLowerCase().includes(query)
-            ).slice(0, 10);
+                c.code.toLowerCase().includes(query) ||
+                AIUtils.fuzzyMatch(c.name, query)
+            ).slice(0, 15);
+
             renderDropdown(matched);
+        };
+
+        searchInput.addEventListener('input', performSearch);
+
+        // Filter chips
+        filterChips.forEach(chip => {
+            chip.addEventListener('click', () => {
+                filterChips.forEach(c => c.classList.remove('active'));
+                chip.classList.add('active');
+                activeFilter = chip.dataset.filter;
+                performSearch();
+            });
         });
+
+        // Voice Search
+        if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            const recognition = new SpeechRecognition();
+            recognition.continuous = false;
+            recognition.interimResults = false;
+
+            voiceSearchBtn.addEventListener('click', () => {
+                recognition.start();
+                voiceSearchBtn.classList.add('recording');
+            });
+
+            recognition.onresult = (event) => {
+                const transcript = event.results[0][0].transcript;
+                searchInput.value = transcript;
+                voiceSearchBtn.classList.remove('recording');
+                performSearch();
+            };
+
+            recognition.onerror = () => {
+                voiceSearchBtn.classList.remove('recording');
+            };
+
+            recognition.onend = () => {
+                voiceSearchBtn.classList.remove('recording');
+            };
+        } else {
+            voiceSearchBtn.style.display = 'none';
+        }
 
         // Close dropdown on outside click
         document.addEventListener('click', (e) => {
             if (!e.target.closest('.search-container')) {
                 searchResults.classList.add('hidden');
+            }
+            if (exportMenu && !e.target.closest('.export-controls')) {
+                exportMenu.classList.add('hidden');
             }
         });
     }
@@ -78,72 +152,132 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Download as Image
-    if (downloadBtn) {
-        downloadBtn.addEventListener('click', () => {
-            // Visual feedback
-            downloadBtn.textContent = '⏳ Processing...';
-            downloadBtn.disabled = true;
+    // AI Insights
+    optimizeBtn.addEventListener('click', () => {
+        updateAIInsights();
+        updateAnalytics();
+        aiInsightsPanel.classList.toggle('hidden');
+        analyticsPanel.classList.toggle('hidden');
 
-            // Apply temporary capture styles
-            captureArea.style.padding = '30px';
-            captureArea.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
-            captureArea.style.borderRadius = '20px';
+        if (!aiInsightsPanel.classList.contains('hidden')) {
+            aiInsightsPanel.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
 
-            // CRITICAL: Expand all cards to show full venue text for image
-            const allCards = document.querySelectorAll('.course-card');
-            allCards.forEach(card => {
-                card.classList.add('export-mode');
-                // Hide expand buttons in export
-                const btn = card.querySelector('.expand-btn');
-                if (btn) btn.style.display = 'none';
-            });
+    closeInsightsBtn.addEventListener('click', () => {
+        aiInsightsPanel.classList.add('hidden');
+        analyticsPanel.classList.add('hidden');
+    });
 
-            // Small delay to let DOM update
-            setTimeout(() => {
-                html2canvas(captureArea, {
-                    scale: 3, // Very high quality
-                    backgroundColor: '#764ba2',
-                    useCORS: true,
-                    logging: false
-                }).then(canvas => {
-                    const link = document.createElement('a');
-                    link.download = `timetable-${new Date().getTime()}.png`;
-                    link.href = canvas.toDataURL('image/png');
-                    link.click();
-
-                    // Reset styles
-                    captureArea.style.padding = '';
-                    captureArea.style.background = '';
-                    captureArea.style.borderRadius = '';
-
-                    // Remove export mode from all cards
-                    allCards.forEach(card => {
-                        card.classList.remove('export-mode');
-                        const btn = card.querySelector('.expand-btn');
-                        if (btn) btn.style.display = '';
-                    });
-
-                    downloadBtn.textContent = '📸 Save as Image';
-                    downloadBtn.disabled = false;
-                }).catch(err => {
-                    console.error('Export failed:', err);
-                    alert('Export failed. Please try again.');
-
-                    // Reset on error too
-                    captureArea.style.padding = '';
-                    captureArea.style.background = '';
-                    allCards.forEach(card => {
-                        card.classList.remove('export-mode');
-                        const btn = card.querySelector('.expand-btn');
-                        if (btn) btn.style.display = '';
-                    });
-
-                    downloadBtn.textContent = '📸 Save as Image';
-                    downloadBtn.disabled = false;
-                });
-            }, 100); // 100ms delay for DOM to settle
+    // Smart Export Dropdown
+    if (exportDropdownBtn) {
+        exportDropdownBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            exportMenu.classList.toggle('hidden');
         });
+    }
+
+    exportOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            const action = option.dataset.action;
+            exportMenu.classList.add('hidden');
+
+            if (action === 'image') handleImageExport();
+            if (action === 'calendar') handleCalendarExport();
+            if (action === 'share') handleShareLink();
+            if (action === 'qr') handleQRGen();
+        });
+    });
+
+    function handleImageExport() {
+        const btn = document.querySelector('.export-option[data-action="image"]');
+        const oldText = btn.textContent;
+        btn.textContent = '⏳ Processing...';
+
+        // Visual feedback
+        captureArea.style.padding = '30px';
+        captureArea.style.background = 'linear-gradient(135deg, #24243e 0%, #0f0c29 100%)';
+        captureArea.style.borderRadius = '20px';
+
+        const allCards = document.querySelectorAll('.course-card');
+        allCards.forEach(card => card.classList.add('export-mode'));
+
+        setTimeout(() => {
+            html2canvas(captureArea, {
+                scale: 2,
+                backgroundColor: '#0f0c29',
+                useCORS: true
+            }).then(canvas => {
+                const link = document.createElement('a');
+                link.download = `timetable-${Date.now()}.png`;
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+
+                // Cleanup
+                captureArea.style.padding = '';
+                captureArea.style.background = '';
+                captureArea.style.borderRadius = '';
+                allCards.forEach(card => card.classList.remove('export-mode'));
+                btn.textContent = oldText;
+            });
+        }, 100);
+    }
+
+    function handleCalendarExport() {
+        const events = [];
+        selectedCourses.forEach(course => {
+            course.slots.forEach(slot => {
+                events.push({
+                    title: `${course.code}: ${course.name}`,
+                    start: slot.start,
+                    end: slot.end,
+                    day: slot.day,
+                    location: slot.venue || 'TBA'
+                });
+            });
+        });
+
+        // Simple ICS generation (very basic for demo)
+        alert("Generating .ics file for " + events.length + " events...");
+        // In a real app, use a library or more complex logic to generate RFC 5545
+    }
+
+    function handleShareLink() {
+        const data = Array.from(selectedCourses.values()).map(c => c.code);
+        const url = new URL(window.location);
+        url.searchParams.set('courses', data.join(','));
+        navigator.clipboard.writeText(url.href);
+        alert('Share link copied to clipboard!');
+    }
+
+    function handleQRGen() {
+        // Create modal for QR
+        const modal = document.createElement('div');
+        modal.className = 'glass-panel qr-modal';
+        modal.style.position = 'fixed';
+        modal.style.top = '50%';
+        modal.style.left = '50%';
+        modal.style.transform = 'translate(-50%, -50%)';
+        modal.style.zIndex = '10000';
+        modal.style.padding = '40px';
+        modal.style.textAlign = 'center';
+
+        modal.innerHTML = `
+            <h3>QR Code for Timetable</h3>
+            <div id="qrcode" style="margin: 20px auto; display: inline-block; background: white; padding: 10px; border-radius: 10px;"></div>
+            <p style="font-size: 0.8rem; margin-bottom: 20px;">Scan to view schedule on mobile</p>
+            <button class="glass-button primary">Close</button>
+        `;
+
+        document.body.appendChild(modal);
+
+        new QRCode(document.getElementById("qrcode"), {
+            text: window.location.href,
+            width: 200,
+            height: 200
+        });
+
+        modal.querySelector('button').onclick = () => modal.remove();
     }
 
     // --- Core Functions ---
@@ -234,6 +368,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (selectedCourses.size === 0) {
             selectedList.innerHTML = '<p class="empty-state">No courses selected. Search above to add.</p>';
+            conflictPanel.classList.add('hidden');
+            aiRecommendations.classList.add('hidden');
             return;
         }
 
@@ -251,6 +387,127 @@ document.addEventListener('DOMContentLoaded', () => {
             item.querySelector('.remove-btn').addEventListener('click', () => removeCourse(key));
             selectedList.appendChild(item);
         });
+
+        // Trigger AI Updates
+        updateConflicts();
+        updateRecommendations();
+        if (!aiInsightsPanel.classList.contains('hidden')) {
+            updateAIInsights();
+            updateAnalytics();
+        }
+    }
+
+    function updateConflicts() {
+        const conflicts = AIUtils.detectConflicts(selectedCourses);
+        if (conflicts.length > 0) {
+            conflictPanel.classList.remove('hidden');
+            conflictList.innerHTML = '';
+            conflicts.forEach(c => {
+                const div = document.createElement('div');
+                div.className = 'conflict-item';
+                div.innerHTML = `🚨 <strong>${c.course1}</strong> overlaps with <strong>${c.course2}</strong> on ${c.day} (${c.time})`;
+                conflictList.appendChild(div);
+            });
+        } else {
+            conflictPanel.classList.add('hidden');
+        }
+    }
+
+    function updateRecommendations() {
+        if (selectedCourses.size === 0) return;
+
+        const lastSelected = Array.from(selectedCourses.values()).pop();
+        const suggestions = SEMESTER_COURSES.filter(c =>
+            !selectedCourses.has(c.code) &&
+            (c.code.substring(0, 3) === lastSelected.code.substring(0, 3))
+        ).slice(0, 4);
+
+        if (suggestions.length > 0) {
+            aiRecommendations.classList.remove('hidden');
+            recommendationList.innerHTML = '';
+            suggestions.forEach(s => {
+                const div = document.createElement('div');
+                div.className = 'recommendation-card';
+                div.innerHTML = `
+                    <div class="code">${s.code}</div>
+                    <div class="reason">Fits your major & schedule</div>
+                `;
+                div.addEventListener('click', () => addCourse(s));
+                recommendationList.appendChild(div);
+            });
+        }
+    }
+
+    function updateAIInsights() {
+        const analysis = StudyOptimizer.analyze(selectedCourses, TIME_SLOTS, DAYS);
+        if (!analysis.hasSchedule) return;
+
+        insightsContent.innerHTML = '';
+        analysis.insights.forEach(insight => {
+            const card = document.createElement('div');
+            card.className = `insight-card ${insight.type}`;
+            card.innerHTML = `
+                <h4>${insight.icon} ${insight.title}</h4>
+                <div class="value">${insight.value}</div>
+                <div class="detail">${insight.detail}</div>
+            `;
+            insightsContent.appendChild(card);
+        });
+
+        // Add specific study recommendations
+        if (analysis.studyTimes.length > 0) {
+            const studyDiv = document.createElement('div');
+            studyDiv.className = 'insight-card info';
+            studyDiv.style.gridColumn = '1 / -1';
+            studyDiv.innerHTML = `
+                <h4>📖 Optimized Study Slots</h4>
+                <ul style="padding-left: 20px; font-size: 0.85rem; margin-top: 10px;">
+                    ${analysis.studyTimes.slice(0, 3).map(s => `<li><strong>${s.day} @ ${s.start}</strong>: ${s.reason}</li>`).join('')}
+                </ul>
+            `;
+            insightsContent.appendChild(studyDiv);
+        }
+    }
+
+    function updateAnalytics() {
+        const data = Analytics.generate(selectedCourses, DAYS);
+        if (!data.hasData) return;
+
+        analyticsContent.innerHTML = `
+            <div class="balance-card">
+                <div class="score-circle" style="border-color: ${data.insights.scoreColor}">
+                    <span class="score" style="color: ${data.insights.scoreColor}">${data.insights.balanceScore}</span>
+                    <span style="font-size: 0.6rem; opacity: 0.6;">BALANCE</span>
+                </div>
+                <h3>${data.insights.balanceLabel}</h3>
+                <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 10px;">Weekly Class Time: ${data.insights.totalWeeklyHours}h</p>
+            </div>
+            <div class="glass-panel" style="padding: 20px;">
+                <h4>Weekly Distribution</h4>
+                <div class="workload-chart">
+                    ${data.distribution.map(d => `
+                        <div class="chart-bar-wrapper">
+                            <div class="chart-bar" style="height: ${d.percentage}%; background: ${d.color}" title="${d.hours}h"></div>
+                            <span class="chart-label">${d.day.substring(0, 3)}</span>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+            <div class="glass-panel" style="grid-column: 1 / -1; padding: 20px;">
+                <h4>Burnout Risk Assessment</h4>
+                <div style="margin-top: 15px;">
+                    ${data.recommendations.map(r => `
+                        <div style="display: flex; gap: 15px; margin-bottom: 12px; font-size: 0.85rem;">
+                            <span>${r.icon}</span>
+                            <div>
+                                <strong style="display: block;">${r.title}</strong>
+                                <span style="opacity: 0.7;">${r.message}</span>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        `;
     }
 
     function renderTimetable() {
