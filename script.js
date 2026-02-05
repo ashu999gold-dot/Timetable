@@ -295,6 +295,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const startDay = new Date();
         startDay.setDate(startDay.getDate() + (1 + 7 - startDay.getDay()) % 7);
 
+        const escapeICS = (str) => {
+            return str.replace(/[\\,;]/g, (match) => "\\" + match).replace(/\n/g, "\\n");
+        };
+
         selectedCourses.forEach(course => {
             course.slots.forEach((slot, index) => {
                 const dayOffset = dayMap[slot.day];
@@ -309,13 +313,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 };
 
                 const uid = `${Date.now()}-${course.code}-${index}@timetable-ai.local`;
+                const summary = escapeICS(`${course.code}: ${course.name}`);
+                const location = escapeICS(slot.venue || 'TBA');
 
                 icsRows.push("BEGIN:VEVENT");
                 icsRows.push(`UID:${uid}`);
                 icsRows.push(`DTSTAMP:${stamp}`);
-                icsRows.push(`SUMMARY:${course.code}: ${course.name}`);
-                icsRows.push(`DESCRIPTION:Class for ${course.name}`);
-                icsRows.push(`LOCATION:${slot.venue || 'TBA'}`);
+                icsRows.push(`SUMMARY:${summary}`);
+                icsRows.push(`DESCRIPTION:Class for ${summary}`);
+                icsRows.push(`LOCATION:${location}`);
                 icsRows.push(`DTSTART:${formatICSDate(eventDate, slot.start)}`);
                 icsRows.push(`DTEND:${formatICSDate(eventDate, slot.end)}`);
                 icsRows.push("RRULE:FREQ=WEEKLY;UNTIL=20261231T235959Z");
