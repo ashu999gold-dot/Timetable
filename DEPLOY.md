@@ -1,43 +1,27 @@
-# Deploying to Netlify via GitHub
+# Deploying Your Timetable Generator
 
-Since I cannot access your GitHub account directly, follow these steps to deploy your website.
+This project is optimized for **Cloudflare Pages** or **GitHub Pages** to ensure high reliability and avoid bandwidth limits.
 
-## 1. Commit Your Code
-I have already initialized the Git repository and styled the files. You need to commit them.
-Open your terminal in `d:/calculator-website` and run:
+## 1. Primary Recommendation: Cloudflare Pages (Unlimited)
+Cloudflare is recommended because it offers **unlimited bandwidth** on its free tier.
 
-```bash
-# Set your identity (if you haven't already globally)
-git config user.email "your-email@example.com"
-git config user.name "Your Name"
+1. Log in to [Cloudflare](https://dash.cloudflare.com) and go to **Workers & Pages**.
+2. Click **Create application** > **Pages** > **Connect to Git**.
+3. Select your GitHub repository: `ashu999gold-dot/timetable`.
+4. **Build Settings**:
+   - **Framework preset**: None
+   - **Build command**: (Leave empty)
+   - **Build output directory**: `.`
+5. Click **Save and Deploy**.
 
-# Commit the files
-git commit -m "Initial commit of Timetable Generator"
-```
+## 2. Alternative: GitHub Pages (100GB/mo)
+1. Go to your repository on GitHub.
+2. Click **Settings** > **Pages**.
+3. Under **Build and deployment**, select **Deploy from a branch**.
+4. Branch: `main` / `(/root)`.
+5. Click **Save**.
 
-## 2. Create a Repository on GitHub
-1. Go to [GitHub.com](https://github.com/new).
-2. Create a new repository name, e.g., `liquid-timetable`.
-3. Do **not** initialize with README, .gitignore, or license (we have code locally).
-4. Click **Create repository**.
+## 3. Maintenance
+Whenever you request a change and I push it, the site will **automatically update** on both platforms.
 
-## 3. Push to GitHub
-Copy the commands from GitHub's "...or push an existing repository from the command line" section, or use these (replace `YOUR_USERNAME`):
-
-```bash
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/liquid-timetable.git
-git push -u origin main
-```
-
-## 4. Deploy on Netlify
-1. Log in to [Netlify](https://app.netlify.com/).
-2. Click **"Add new site"** > **"Import from an existing project"**.
-3. Select **GitHub**.
-4. Authorize Netlify to access your GitHub account.
-5. Search for `liquid-timetable` and select it.
-6. **Build Settings**:
-   - For this Vanilla JS site, you can leave the "Build command" and "Publish directory" **blank** (or set Publish directory to `.`).
-7. Click **Deploy site**.
-
-🎉 Your site will be live in a few seconds!
+🎉 Your "trouble-free" site is ready!
