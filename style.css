@@ -486,31 +486,35 @@ body {
 
 .course-card .course-name {
     font-size: 0.95rem;
-    font-weight: 700;
+    font-weight: 800;
     margin-bottom: 4px;
     width: 100%;
-    /* Prevent name from overflowing */
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 .course-card .course-venue {
     font-size: 0.7rem;
+    font-weight: 600;
     margin-top: 2px;
     padding: 3px 7px;
-    background: rgba(0, 0, 0, 0.35);
+    background: rgba(0, 0, 0, 0.45);
     border-radius: 5px;
-
-    /* CRITICAL: Constrain to card width, truncate by default */
+    text-shadow: none;
     max-width: 100%;
     width: fit-content;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-
-    /* Only show as inline-block when collapsed */
     display: inline-block;
+}
+
+/* Enhanced Export Mode */
+.course-card.export-mode {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 1);
 }
 
 /* When expanded, allow venue to wrap vertically */
