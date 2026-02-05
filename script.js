@@ -210,69 +210,58 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function handleImageExport() {
         const btn = document.querySelector('.export-option[data-action="image"]');
-        const oldText = btn.textContent;
-        btn.textContent = '⏳ Creating High-Vibrancy Image...';
+        if (!btn) return;
 
-        // Lighten the export background significantly
+        const oldText = btn.textContent;
+        btn.textContent = '⏳ Preparing Table...';
+
+        // Prepare capture area styles
+        const originalWidth = captureArea.style.width;
+        const originalBg = captureArea.style.background;
+        const originalPadding = captureArea.style.padding;
+
+        // Force a stable table layout for the capture
+        captureArea.style.width = '1200px';
         captureArea.style.padding = '40px';
-        captureArea.style.background = 'linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%)'; // Elegant light grey/white gradient
-        captureArea.style.borderRadius = '24px';
-        captureArea.style.boxShadow = '0 30px 60px rgba(0,0,0,0.15)';
-        captureArea.style.color = '#333'; // Darker text for the grid during capture
+        captureArea.style.background = 'linear-gradient(135deg, #0f0c29 0%, #302b63 100%)';
 
         const allCards = document.querySelectorAll('.course-card');
-        const gridCells = document.querySelectorAll('.grid-cell, .grid-header, .time-label');
-
         allCards.forEach(card => {
             card.classList.add('export-mode');
-            card.style.opacity = '1';
-            card.style.filter = 'brightness(1.1) contrast(1.1)';
-            card.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
-        });
-
-        gridCells.forEach(cell => {
-            cell.style.borderColor = 'rgba(0,0,0,0.1)';
-            cell.style.color = '#444';
+            card.style.filter = 'contrast(1.1) brightness(1.1)';
         });
 
         setTimeout(() => {
             html2canvas(captureArea, {
                 scale: 3,
-                backgroundColor: '#ffffff',
+                backgroundColor: '#0f0c29',
                 useCORS: true,
-                logging: false,
                 onclone: (clonedDoc) => {
-                    // Force any missing styles in the clone
-                    clonedDoc.getElementById('capture-area').style.color = '#333';
+                    const clonedGrid = clonedDoc.getElementById('timetable-grid');
+                    if (clonedGrid) {
+                        clonedGrid.style.display = 'grid';
+                        clonedGrid.style.gridTemplateColumns = '100px repeat(5, 1fr)';
+                        clonedGrid.style.width = '1120px';
+                        clonedGrid.style.gap = '8px';
+                    }
                 }
             }).then(canvas => {
                 const link = document.createElement('a');
-                link.download = `Timetable-Pro-${Date.now()}.png`;
+                link.download = `Timetable-${Date.now()}.png`;
                 link.href = canvas.toDataURL('image/png', 1.0);
                 link.click();
 
                 // Cleanup
-                captureArea.style.padding = '';
-                captureArea.style.background = '';
-                captureArea.style.borderRadius = '';
-                captureArea.style.boxShadow = '';
-                captureArea.style.color = '';
-
+                captureArea.style.width = originalWidth;
+                captureArea.style.background = originalBg;
+                captureArea.style.padding = originalPadding;
                 allCards.forEach(card => {
                     card.classList.remove('export-mode');
-                    card.style.opacity = '';
                     card.style.filter = '';
-                    card.style.boxShadow = '';
                 });
-
-                gridCells.forEach(cell => {
-                    cell.style.borderColor = '';
-                    cell.style.color = '';
-                });
-
                 btn.textContent = oldText;
             });
-        }, 500); // Wait for styles to settle
+        }, 500);
     }
 
     function handleCalendarExport() {
