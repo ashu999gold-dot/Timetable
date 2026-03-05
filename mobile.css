@@ -1,0 +1,50 @@
+/* Mobile Specific Overrides */
+
+body {
+    padding-bottom: 20px;
+}
+
+.glass-container {
+    padding: 10px 5px !important;
+}
+
+.app-header h1 {
+    font-size: 1.8rem !important;
+}
+
+.timetable-grid-container {
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.course-card {
+    border-width: 2px !important;
+}
+
+/* Force elements to be touch-friendly */
+.glass-button,
+.filter-chip,
+.dropdown-item {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#course-search {
+    font-size: 16px;
+    /* Prevents auto-zoom on iOS */
+}
+
+.action-buttons {
+    position: sticky;
+    bottom: 10px;
+    z-index: 50;
+    background: rgba(15, 12, 41, 0.9);
+    padding: 15px;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}

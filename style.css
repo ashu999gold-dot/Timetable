@@ -44,7 +44,9 @@ body {
     position: absolute;
     filter: blur(80px);
     opacity: 0.6;
-    animation: float 10s infinite ease-in-out alternate;
+    animation: float 15s infinite ease-in-out alternate;
+    will-change: transform;
+    pointer-events: none;
 }
 
 .blob-1 {
@@ -76,11 +78,19 @@ body {
 
 @keyframes float {
     0% {
-        transform: translate(0, 0) scale(1);
+        transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+    }
+
+    33% {
+        transform: translate3d(30px, -20px, 0) scale(1.05) rotate(2deg);
+    }
+
+    66% {
+        transform: translate3d(-10px, 40px, 0) scale(0.95) rotate(-1deg);
     }
 
     100% {
-        transform: translate(20px, 40px) scale(1.1);
+        transform: translate3d(20px, 40px, 0) scale(1.1) rotate(0deg);
     }
 }
 
@@ -113,7 +123,10 @@ body {
     font-family: inherit;
     color: white;
     outline: none;
-    transition: all 0.3s ease;
+    transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .glass-input:focus {
@@ -249,7 +262,7 @@ body {
     color: rgba(255, 255, 255, 0.5);
     font-size: 1.5rem;
     cursor: pointer;
-    transition: color 0.2s;
+    transition: color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     line-height: 1;
 }
 
@@ -286,7 +299,9 @@ body {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
-    transition: transform 0.2s;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
 }
 
 .selected-item:hover {
@@ -441,20 +456,24 @@ body {
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 
     /* Smooth Pop Animation */
-    animation: popIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation: popIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     transform-origin: center;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        filter 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, opacity, filter;
 }
 
 @keyframes popIn {
     0% {
-        transform: scale(0.6);
+        transform: scale(0.8) translate3d(0, 10px, 0);
         opacity: 0;
-        filter: blur(10px);
+        filter: blur(5px);
     }
 
     100% {
-        transform: scale(1);
+        transform: scale(1) translate3d(0, 0, 0);
         opacity: 1;
         filter: blur(0);
     }
@@ -500,11 +519,11 @@ body {
 }
 
 .course-card:hover {
-    transform: scale(1.03) translateY(-2px);
+    transform: scale(1.04) translate3d(0, -4px, 0);
     z-index: 100 !important;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
-    border-color: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(20px);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6);
+    border-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(15px);
 }
 
 .course-card .course-name {
@@ -594,6 +613,18 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .glass-container {
+        padding: 20px 10px;
+    }
+
+    .app-header h1 {
+        font-size: 2rem;
+    }
+
+    .app-header p {
+        font-size: 1rem;
+    }
+
     .slot-row {
         flex-direction: column;
         align-items: stretch;
@@ -607,9 +638,50 @@ body {
         margin-top: -30px;
     }
 
+    .action-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .action-buttons .spacer {
+        display: none;
+    }
+
+    .timetable-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+    }
+
+    .export-controls {
+        width: 100%;
+    }
+
+    #export-dropdown-btn {
+        width: 100%;
+    }
+
+    .export-menu {
+        right: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .timetable-grid-container {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 15px;
+    }
+
     .timetable-grid {
-        min-width: 600px;
+        min-width: 800px;
         /* Force scroll on small screens */
+    }
+
+    .expand-btn {
+        display: flex;
+        background: rgba(255, 255, 255, 0.35);
     }
 }
 
