@@ -19,6 +19,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     color: var(--text-color);
@@ -27,6 +31,32 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
     position: relative;
+    /* Force Hardware Acceleration for butter smooth scrolling */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* Custom Premium Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(15, 12, 41, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    border: 2px solid rgba(15, 12, 41, 0.8);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4);
 }
 
 /* Background Animated Blobs */
@@ -112,6 +142,9 @@ body {
     box-shadow: var(--glass-shadow);
     padding: 30px;
     margin-bottom: 30px;
+    /* Hardware Acceleration for Blur */
+    transform: translateZ(0);
+    will-change: transform;
 }
 
 .glass-input,
