@@ -661,6 +661,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     card.style.left = '2px';
                 }
 
+                // Staggered pop-in animation
+                card.style.animationDelay = `${(Number(slotIndex) * 0.05) + (index * 0.05)}s`;
+
                 cell.appendChild(card);
             });
         });
